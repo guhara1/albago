@@ -6,7 +6,7 @@
 <meta name="google-site-verification" content="WmnjQ8tbFBjup0r5H-7OgCTu5uYeRu-9o4r8sA3OtVE" />
 <meta name="naver-site-verification" content="5dc81564e3d18e2f08803de7015a6d96d3acfdf8" />
 <title>광고·제휴 문의 - 마사지알바고</title>
-<meta name="description" content="마사지알바고 광고 신청·제휴 문의. 전화, 카톡, 이메일, 신청 폼 4가지 채널로 빠르게 응답해 드립니다." />
+<meta name="description" content="마사지알바고 광고 신청·제휴 문의. 카톡·전화·폼·이메일 4가지 채널로 빠르게 응답." />
 <meta name="keywords" content="마사지알바고 광고문의, 마사지 채용 광고, 마사지샵 제휴, 광고 신청, 업체 가입" />
 <meta name="theme-color" content="#1E40AF" />
 <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
@@ -25,7 +25,7 @@
 <div class="topbar"><div class="container">
   <a href="../guide/index.html">이용 안내</a>
   <a href="../support/index.html#safety">안전 가이드</a>
-  <a href="../partners/index.html">제휴 문의</a>
+  <a href="index.html">광고 문의</a>
 </div></div>
 
 <header class="site-header"><div class="container header-inner">
@@ -72,7 +72,7 @@
       <p class="inquiry-ch__title">카카오톡 채널</p>
     </div>
     <div class="inquiry-ch__value">@마사지알바고</div>
-    <p class="inquiry-ch__desc">친구 추가 후 1:1 톡으로 빠르게 상담받기</p>
+    <p class="inquiry-ch__desc">친구 추가 후 1:1 톡으로 빠르게 상담</p>
   </a>
 
   <a href="tel:0508-202-4683" class="inquiry-ch inquiry-ch--phone">
@@ -92,7 +92,7 @@
       <p class="inquiry-ch__title">광고 신청 폼</p>
     </div>
     <div class="inquiry-ch__value">아래 양식 작성</div>
-    <p class="inquiry-ch__desc">구체적인 요구사항을 정리해서 보내기</p>
+    <p class="inquiry-ch__desc">접수 즉시 담당자에게 텔레그램 알림</p>
   </a>
 
   <a href="mailto:partners@massage-albago.kr?subject=광고·제휴 문의" class="inquiry-ch inquiry-ch--email">
@@ -101,7 +101,7 @@
       <p class="inquiry-ch__title">이메일</p>
     </div>
     <div class="inquiry-ch__value">partners@massage-albago.kr</div>
-    <p class="inquiry-ch__desc">자료 첨부가 필요한 경우 권장</p>
+    <p class="inquiry-ch__desc">자료 첨부가 필요한 경우</p>
   </a>
 </div>
 
@@ -110,45 +110,52 @@
 </div>
 
 <h2 id="inquiry-form" style="margin-top:48px;">광고 신청 폼</h2>
-<p>아래 양식을 작성해 주시면 담당자가 확인 후 가장 적합한 요금제·노출 위치를 안내드립니다. <strong>필수 항목만 채우셔도 됩니다.</strong></p>
+<p>아래 양식을 작성해 주시면 <strong>접수 즉시 담당자에게 텔레그램으로 알림</strong>이 전송됩니다. 빠른 시간 내에 연락드립니다.</p>
 
 <div class="form-card">
-  <form action="https://formsubmit.co/partners@massage-albago.kr" method="POST">
-    <!-- FormSubmit 설정 -->
-    <input type="hidden" name="_subject" value="[마사지알바고] 광고·제휴 문의" />
-    <input type="hidden" name="_template" value="table" />
-    <input type="hidden" name="_captcha" value="true" />
-    <input type="hidden" name="_next" value="https://massage-albago.kr/inquiry/?sent=1" />
-    <input type="text" name="_honey" style="display:none" />
+<form id="inquiry-form-el" novalidate>
 
-    <div class="form-row">
-      <div class="form-group">
-        <label>업체명 <span class="form-required">*</span></label>
-        <input class="form-input" type="text" name="업체명" required placeholder="예: 강남 라온테라피" />
-      </div>
-      <div class="form-group">
-        <label>담당자 성함 <span class="form-required">*</span></label>
-        <input class="form-input" type="text" name="담당자" required placeholder="예: 김실장" />
-      </div>
+  <!-- 업소 정보 -->
+  <div class="form-section">
+    <h3 class="form-section__title"><span class="form-section__icon">🏢</span> 업소 정보</h3>
+
+    <div class="form-group">
+      <label>업체명 <span class="form-required">*</span></label>
+      <input class="form-input" type="text" name="companyName" required placeholder="업체명" />
     </div>
 
-    <div class="form-row">
-      <div class="form-group">
-        <label>연락처 (전화) <span class="form-required">*</span></label>
-        <input class="form-input" type="tel" name="연락처" required placeholder="010-0000-0000" />
-        <p class="form-hint">담당자가 직접 통화 가능한 번호</p>
-      </div>
-      <div class="form-group">
-        <label>이메일</label>
-        <input class="form-input" type="email" name="이메일" placeholder="optional@example.com" />
-      </div>
+    <div class="form-group">
+      <label>사업자등록번호 <span class="form-required">*</span></label>
+      <input class="form-input" type="text" name="bizNumber" required maxlength="10" pattern="\d{10}" placeholder="사업자등록번호 (000-00-00000)" inputmode="numeric" />
+      <p class="form-hint">하이픈(-) 없이 숫자만 입력해주세요.</p>
     </div>
+
+    <div class="form-group">
+      <label>회사 주소</label>
+      <div class="addr-row">
+        <input class="form-input" type="text" id="addr-zip" name="zip" placeholder="우편번호" readonly style="flex:0 0 120px;" />
+        <button type="button" class="btn btn-primary" id="addr-search-btn">주소검색</button>
+      </div>
+      <input class="form-input" type="text" id="addr-base" name="addr" placeholder="기본주소" readonly style="margin-top:8px;" />
+      <input class="form-input" type="text" id="addr-detail" name="addrDetail" placeholder="상세주소" style="margin-top:8px;" />
+      <input class="form-input form-input--muted" type="text" id="addr-ref" name="addrRef" placeholder="참고항목" readonly style="margin-top:8px;" />
+    </div>
+
+    <div class="form-group">
+      <label>회사 전화번호</label>
+      <input class="form-input" type="tel" name="companyPhone" placeholder="회사 전화번호 (예: 02-1234-5678)" />
+    </div>
+  </div>
+
+  <!-- 광고 정보 -->
+  <div class="form-section">
+    <h3 class="form-section__title"><span class="form-section__icon">📢</span> 광고 정보</h3>
 
     <div class="form-row">
       <div class="form-group">
-        <label>지역 <span class="form-required">*</span></label>
-        <select class="form-select" name="지역" required>
-          <option value="">— 선택해 주세요 —</option>
+        <label>광고 지역 <span class="form-required">*</span></label>
+        <select class="form-select" name="region" required>
+          <option value="">— 선택 —</option>
           <option>서울특별시</option>
           <option>경기도</option>
           <option>인천광역시</option>
@@ -166,11 +173,12 @@
           <option>전북특별자치도</option>
           <option>전라남도</option>
           <option>제주특별자치도</option>
+          <option>전국</option>
         </select>
       </div>
       <div class="form-group">
-        <label>업종</label>
-        <select class="form-select" name="업종">
+        <label>업종 <span class="form-required">*</span></label>
+        <select class="form-select" name="category" required>
           <option value="">— 선택 —</option>
           <option>1인샵</option>
           <option>스웨디시</option>
@@ -190,42 +198,69 @@
     <div class="form-group">
       <label>희망 광고 티어 <span class="form-required">*</span></label>
       <div class="form-radio-group">
-        <label class="form-radio"><input type="radio" name="광고티어" value="VVIP" required /> VVIP (최상단)</label>
-        <label class="form-radio"><input type="radio" name="광고티어" value="VIP" /> VIP</label>
-        <label class="form-radio"><input type="radio" name="광고티어" value="프리미엄" /> 프리미엄</label>
-        <label class="form-radio"><input type="radio" name="광고티어" value="그랜드" /> 그랜드</label>
-        <label class="form-radio"><input type="radio" name="광고티어" value="상담요청" /> 추천 받기</label>
+        <label class="form-radio"><input type="radio" name="tier" value="VVIP" required /> VVIP (최상단)</label>
+        <label class="form-radio"><input type="radio" name="tier" value="VIP" /> VIP</label>
+        <label class="form-radio"><input type="radio" name="tier" value="프리미엄" /> 프리미엄</label>
+        <label class="form-radio"><input type="radio" name="tier" value="그랜드" /> 그랜드</label>
+        <label class="form-radio"><input type="radio" name="tier" value="상담요청" /> 추천 받기</label>
       </div>
-      <p class="form-hint">티어별 노출 위치·가격은 담당자가 안내드립니다.</p>
     </div>
 
     <div class="form-group">
       <label>광고 시작 희망일</label>
-      <input class="form-input" type="text" name="시작희망일" placeholder="예: 2026-06-01 또는 협의" />
+      <input class="form-input" type="text" name="startDate" placeholder="예: 2026-06-01 또는 협의" />
     </div>
+  </div>
 
+  <!-- 담당자 정보 -->
+  <div class="form-section">
+    <h3 class="form-section__title"><span class="form-section__icon">👤</span> 담당자 정보</h3>
+    <div class="form-row">
+      <div class="form-group">
+        <label>담당자 성함 <span class="form-required">*</span></label>
+        <input class="form-input" type="text" name="managerName" required placeholder="예: 김실장" />
+      </div>
+      <div class="form-group">
+        <label>담당자 휴대폰 <span class="form-required">*</span></label>
+        <input class="form-input" type="tel" name="managerPhone" required placeholder="010-0000-0000" />
+      </div>
+    </div>
     <div class="form-group">
-      <label>추가 요청 사항</label>
-      <textarea class="form-textarea" name="추가요청" rows="5" placeholder="배너 디자인 요청, 노출 키워드, 특이 사항 등을 자유롭게 작성"></textarea>
+      <label>이메일</label>
+      <input class="form-input" type="email" name="managerEmail" placeholder="optional@example.com" />
     </div>
+  </div>
 
-    <div class="callout warning" style="font-size:13px;">
-      <strong>개인정보 처리 안내:</strong> 입력하신 정보는 광고·제휴 상담 목적으로만 사용되며, 별도 동의 없이 제3자에게 공유되지 않습니다.
+  <!-- 추가 요청 -->
+  <div class="form-section">
+    <h3 class="form-section__title"><span class="form-section__icon">📝</span> 추가 요청 사항</h3>
+    <div class="form-group">
+      <textarea class="form-textarea" name="note" rows="5" placeholder="배너 디자인 요청, 노출 키워드, 특이 사항 등을 자유롭게 작성"></textarea>
     </div>
+  </div>
 
-    <div class="form-submit-row">
-      <button type="submit" class="btn btn-primary btn-lg">광고 신청 보내기</button>
-      <a href="../partners/index.html" class="btn btn-ghost btn-lg">취소</a>
-    </div>
-  </form>
+  <!-- Honeypot (스팸 방지) -->
+  <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute; left:-9999px;" aria-hidden="true" />
+
+  <div class="callout warning" style="font-size:13px;">
+    <strong>개인정보 처리 안내:</strong> 입력하신 정보는 광고·제휴 상담 목적으로만 사용되며, 별도 동의 없이 제3자에게 공유되지 않습니다. 접수 즉시 담당자 텔레그램으로 알림이 전송됩니다.
+  </div>
+
+  <div class="form-submit-row">
+    <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">광고 신청 보내기</button>
+    <a href="../partners/index.html" class="btn btn-ghost btn-lg">취소</a>
+  </div>
+
+  <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+</form>
 </div>
 
 <h2 style="margin-top:48px;">신청 후 진행 절차</h2>
 <ol style="padding-left:24px; line-height:1.9;">
-  <li><strong>접수 확인</strong> — 영업일 기준 24시간 내 카톡/전화로 1차 연락드립니다.</li>
+  <li><strong>접수 알림</strong> — 폼 제출 즉시 담당자 텔레그램으로 알림 전송.</li>
+  <li><strong>1차 연락</strong> — 영업일 기준 1~2시간 내 카톡/전화로 연락.</li>
   <li><strong>요금제 안내</strong> — 희망 티어·지역에 맞는 가격과 노출 일정 안내.</li>
   <li><strong>사업자 인증</strong> — 사업자등록증 사본 확인 (반드시 필요).</li>
-  <li><strong>배너 제작</strong> — 본인이 직접 제작하시거나 마사지알바고 디자인 지원 (요금제별).</li>
   <li><strong>노출 시작</strong> — 결제 완료 후 24시간 내 노출 시작.</li>
 </ol>
 
@@ -275,12 +310,77 @@
   </div>
 </footer>
 
+<!-- Daum 우편번호 API (무료, API 키 불필요) -->
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script src="../js/main.js"></script>
 <script>
-// 폼 전송 완료 안내
-if (location.search.indexOf('sent=1') !== -1) {
-  alert('광고 신청이 정상 접수되었습니다. 영업일 기준 24시간 내 담당자가 연락드립니다.');
-}
+// 주소검색
+document.getElementById('addr-search-btn').addEventListener('click', function () {
+  new daum.Postcode({
+    oncomplete: function (data) {
+      document.getElementById('addr-zip').value = data.zonecode;
+      document.getElementById('addr-base').value = data.address;
+      var ref = '';
+      if (data.bname) ref += data.bname;
+      if (data.buildingName) ref += (ref ? ', ' : '') + data.buildingName;
+      document.getElementById('addr-ref').value = ref;
+      document.getElementById('addr-detail').focus();
+    }
+  }).open();
+});
+
+// 사업자등록번호 입력시 숫자만
+document.querySelector('input[name="bizNumber"]').addEventListener('input', function (e) {
+  e.target.value = e.target.value.replace(/[^0-9]/g, '');
+});
+
+// 폼 제출
+document.getElementById('inquiry-form-el').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const btn = document.getElementById('submit-btn');
+  const status = document.getElementById('form-status');
+  const form = e.target;
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+
+  const data = {};
+  new FormData(form).forEach((v, k) => { data[k] = v; });
+
+  btn.disabled = true;
+  btn.textContent = '전송중...';
+  status.textContent = '';
+  status.className = 'form-status';
+
+  try {
+    const res = await fetch('/api/inquiry', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    const body = await res.json();
+
+    if (res.ok && body.ok) {
+      status.textContent = '✅ 광고 신청이 접수되었습니다. 담당자가 1~2시간 내 연락드립니다.';
+      status.className = 'form-status form-status--ok';
+      form.reset();
+      btn.textContent = '전송 완료';
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.textContent = '광고 신청 보내기';
+      }, 3000);
+    } else {
+      throw new Error(body.error || '서버 오류');
+    }
+  } catch (err) {
+    status.textContent = '❌ 전송 실패: ' + err.message + ' — 카톡이나 전화로 직접 연락 주세요.';
+    status.className = 'form-status form-status--err';
+    btn.disabled = false;
+    btn.textContent = '다시 보내기';
+  }
+});
 </script>
 </body>
 </html>
