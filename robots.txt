@@ -1,116 +1,30 @@
 # robots.txt for massage-albago.kr
 # 전국 마사지 구인구직 플랫폼
-# 최종 갱신: 2026-05-12
 
-# ================================================================
-# 1. 구글 — 최우선 허용 (모든 경로, Crawl-delay 없음)
-# ================================================================
 User-agent: Googlebot
 Allow: /
-Disallow:
 
-User-agent: Googlebot-Image
-Allow: /
-Disallow:
-
-User-agent: Googlebot-Mobile
-Allow: /
-Disallow:
-
-User-agent: Googlebot-News
-Allow: /
-Disallow:
-
-User-agent: Googlebot-Video
-Allow: /
-Disallow:
-
-User-agent: AdsBot-Google
-Allow: /
-Disallow:
-
-User-agent: AdsBot-Google-Mobile
-Allow: /
-Disallow:
-
-User-agent: Storebot-Google
-Allow: /
-Disallow:
-
-User-agent: Google-InspectionTool
-Allow: /
-Disallow:
-
-# ================================================================
-# 2. 네이버 — 최우선 허용 (모든 경로, Crawl-delay 없음)
-# ================================================================
 User-agent: Yeti
-Allow: /
-Disallow:
-
-User-agent: Yeti-Mobile
-Allow: /
-Disallow:
-
-User-agent: Yeti-Image
-Allow: /
-Disallow:
-
-User-agent: NaverBot
-Allow: /
-Disallow:
-
-User-agent: napsbot
-Allow: /
-Disallow:
-
-# 네이버 웨일 브라우저 (Yeti와 동일 인프라이지만 명시)
-User-agent: Whale
-Allow: /
-Disallow:
-
-# ================================================================
-# 3. 기타 주요 검색엔진 (허용)
-# ================================================================
-User-agent: Daumoa
 Allow: /
 
 User-agent: bingbot
 Allow: /
 
-User-agent: Bingbot
+User-agent: Daumoa
 Allow: /
 
-# ================================================================
-# 4. AI·LLM 검색 크롤러 (트래픽 유입 허용)
-# ================================================================
 User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: Claude-Web
-Allow: /
-
 User-agent: PerplexityBot
-Allow: /
-
-User-agent: Google-Extended
 Allow: /
 
 User-agent: Applebot
 Allow: /
 
-# ================================================================
-# 5. 악성·과부하 유발 SEO 도구 (차단)
-# ================================================================
 User-agent: AhrefsBot
 Disallow: /
 
@@ -120,29 +34,8 @@ Disallow: /
 User-agent: MJ12bot
 Disallow: /
 
-User-agent: DotBot
-Disallow: /
-
-User-agent: PetalBot
-Disallow: /
-
-User-agent: BLEXBot
-Disallow: /
-
-# ================================================================
-# 6. 그 외 모든 크롤러 (기본 허용 + 비공개 경로 차단)
-# ================================================================
 User-agent: *
 Allow: /
-Disallow: /scripts/
-Disallow: /.github/
 Crawl-delay: 1
 
-# ================================================================
-# 7. 사이트맵 (인덱스 + 카테고리별 sub-sitemap)
-# ================================================================
 Sitemap: https://massage-albago.kr/sitemap.xml
-Sitemap: https://massage-albago.kr/sitemap-main.xml
-Sitemap: https://massage-albago.kr/sitemap-region.xml
-Sitemap: https://massage-albago.kr/sitemap-services.xml
-Sitemap: https://massage-albago.kr/sitemap-magazine.xml

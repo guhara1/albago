@@ -1,16 +1,16 @@
 {
   "name": "마사지알바고 - 마사지 구인구직",
   "short_name": "마사지알바고",
-  "description": "전국 마사지·스파·테라피 구인구직 플랫폼. 관리사·테라피스트 채용 공고와 이력서를 한곳에서.",
+  "description": "전국 마사지·스파·테라피 구인구직 플랫폼. 관리사 채용 공고와 이력서를 한곳에서.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#FBFAF7",
-  "theme_color": "#0B5F58",
+  "background_color": "#FFFFFF",
+  "theme_color": "#1E40AF",
   "lang": "ko-KR",
   "dir": "ltr",
-  "categories": ["business", "lifestyle", "productivity"],
+  "categories": ["business", "productivity"],
   "icons": [
     {
       "src": "/favicon.svg",
@@ -23,29 +23,19 @@
     {
       "name": "구인공고 보기",
       "short_name": "구인",
-      "description": "전국 마사지 채용 공고 전체",
       "url": "/jobs/",
       "icons": [{"src": "/favicon.svg", "sizes": "any"}]
     },
     {
       "name": "이력서 등록",
       "short_name": "구직",
-      "description": "관리사·테라피스트 이력서 등록",
       "url": "/resumes/",
       "icons": [{"src": "/favicon.svg", "sizes": "any"}]
     },
     {
       "name": "업체 가입",
       "short_name": "업체",
-      "description": "마사지·스파 업체 채용 공고 등록",
       "url": "/partners/",
-      "icons": [{"src": "/favicon.svg", "sizes": "any"}]
-    },
-    {
-      "name": "지역별 채용",
-      "short_name": "지역",
-      "description": "지역별 마사지 구인구직",
-      "url": "/region/",
       "icons": [{"src": "/favicon.svg", "sizes": "any"}]
     }
   ]
