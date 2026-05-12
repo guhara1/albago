@@ -3,3 +3,7 @@ __pycache__/
 .DS_Store
 .vscode/
 .idea/
+
+# Cloudflare Pages local dev secrets — 절대 커밋하지 마세요
+.dev.vars
+.wrangler/

@@ -903,6 +903,143 @@ details.faq p {
 .pricing-card ul li:last-child { border-bottom: 0; }
 
 /* =====================================================================
+   Inquiry channel box
+   ===================================================================== */
+.inquiry-channels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 24px 0;
+}
+.inquiry-ch {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  border: 2px solid var(--border);
+  background: white;
+  transition: all 0.15s ease;
+  position: relative;
+  overflow: hidden;
+}
+.inquiry-ch:hover {
+  text-decoration: none;
+  border-color: var(--brand-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.inquiry-ch__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.inquiry-ch__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.inquiry-ch--phone .inquiry-ch__icon { background: #DBEAFE; color: var(--brand-primary); }
+.inquiry-ch--kakao .inquiry-ch__icon { background: #FEF3C7; color: #92400E; }
+.inquiry-ch--email .inquiry-ch__icon { background: #E0E7FF; color: #4338CA; }
+.inquiry-ch--form  .inquiry-ch__icon { background: #D1FAE5; color: var(--brand-success); }
+.inquiry-ch__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+.inquiry-ch__value {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-top: 4px;
+}
+.inquiry-ch__desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+}
+.inquiry-ch__pill {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+.pill-fast { background: #FEE2E2; color: var(--brand-danger); }
+.pill-recommended { background: #DBEAFE; color: var(--brand-primary); }
+.pill-new { background: #D1FAE5; color: var(--brand-success); }
+
+/* Form card */
+.form-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  padding: 32px;
+  margin: 32px 0;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+}
+.form-required {
+  color: var(--brand-danger);
+  margin-left: 2px;
+}
+.form-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+.form-radio-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.form-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: white;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.15s ease;
+}
+.form-radio input {
+  margin: 0;
+  cursor: pointer;
+  accent-color: var(--brand-primary);
+}
+.form-radio:hover {
+  border-color: var(--brand-primary);
+}
+.form-submit-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+/* =====================================================================
    Tier ad layout (VVIP / VIP / Premium / Grand)
    ===================================================================== */
 .layout-main {
