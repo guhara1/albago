@@ -53,7 +53,7 @@
     <line x1="110" y1="200" x2="190" y2="200" stroke="#D4B889" stroke-width="1.2"/>
 
     <!-- Tagline -->
-    <text x="150" y="230" text-anchor="middle" font-family="-apple-system, 'Apple SD Gothic Neo', sans-serif" font-size="16" font-weight="700" fill="#0B5F58" letter-spacing="0.5">전국 출장마사지</text>
+    <text x="150" y="230" text-anchor="middle" font-family="-apple-system, 'Apple SD Gothic Neo', sans-serif" font-size="16" font-weight="700" fill="#0B5F58" letter-spacing="0.5">마사지 구인구직</text>
     <text x="150" y="254" text-anchor="middle" font-family="-apple-system, 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="500" fill="#8B6F47" letter-spacing="1">검증된 정보를 한곳에서</text>
 
     <!-- Phone tag -->
