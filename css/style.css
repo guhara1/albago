@@ -1505,3 +1505,7 @@ details.faq p {
   .chip-grid { grid-template-columns: repeat(4, 1fr); }
   .quick-grid { grid-template-columns: repeat(3, 1fr); }
 }
+
+/* Footer business info */
+.footer-bottom p { margin: 4px 0; }
+.footer-bottom p.footer-legal { color: #9ca3af; font-size: 13px; line-height: 1.6; }
