@@ -1,6 +1,0 @@
-name = "albago"
-compatibility_date = "2024-12-01"
-
-[assets]
-directory = "./"
-not_found_handling = "404-page"
