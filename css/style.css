@@ -1509,3 +1509,205 @@ details.faq p {
 /* Footer business info */
 .footer-bottom p { margin: 4px 0; }
 .footer-bottom p.footer-legal { color: #9ca3af; font-size: 13px; line-height: 1.6; }
+
+/* =====================================================================
+   Ad tier pricing (광고 상품 안내)
+   ===================================================================== */
+.ad-tier-list { display: grid; gap: 28px; margin-top: 24px; }
+
+.ad-tier {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.ad-tier:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
+
+.ad-tier__sidebar { padding: 28px 24px; background: #F9FAFB; display: flex; flex-direction: column; }
+.ad-tier__title {
+  display: block;
+  padding: 14px 16px;
+  background: #16A34A;
+  color: white;
+  font-weight: 800;
+  font-size: 17px;
+  text-align: center;
+  border-radius: 10px;
+  letter-spacing: 0.3px;
+  position: relative;
+}
+.ad-tier__features { list-style: none; margin: 22px 0 0; padding: 0; flex: 1; }
+.ad-tier__features li {
+  padding: 7px 0 7px 22px;
+  font-size: 14px;
+  color: #475569;
+  position: relative;
+  line-height: 1.55;
+}
+.ad-tier__features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  color: #16A34A;
+  font-weight: 700;
+}
+.ad-tier__limit {
+  margin-top: 16px;
+  padding: 10px 12px;
+  background: rgba(22, 163, 74, 0.08);
+  color: #15803D;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.ad-tier__pricing { padding: 28px 32px; display: flex; flex-direction: column; }
+.ad-tier__pricing-head {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+.ad-tier__price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  background: #F8FAFC;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.ad-tier__price-row:hover { background: #F1F5F9; border-color: #CBD5E1; }
+.ad-tier__price-row:last-child { margin-bottom: 0; }
+.ad-tier__price-row.best {
+  background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+  border-color: var(--brand-primary);
+  position: relative;
+}
+.ad-tier__price-row.best::after {
+  content: "BEST";
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  background: var(--brand-primary);
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.5px;
+}
+.ad-tier__period { font-size: 15px; color: #334155; font-weight: 500; }
+.ad-tier__price { font-size: 20px; font-weight: 800; color: #0F172A; }
+.ad-tier__price-row.best .ad-tier__price { color: var(--brand-primary); }
+
+/* Tier color variants */
+.ad-tier--vvip .ad-tier__title { background: linear-gradient(135deg, #B45309 0%, #92400E 100%); }
+.ad-tier--vvip .ad-tier__features li::before { color: #B45309; }
+.ad-tier--vvip .ad-tier__limit { background: rgba(180, 83, 9, 0.08); color: #B45309; }
+.ad-tier--vvip .ad-tier__title::after {
+  content: "👑";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+.ad-tier--vip .ad-tier__title { background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%); }
+.ad-tier--vip .ad-tier__features li::before { color: #1E40AF; }
+.ad-tier--vip .ad-tier__limit { background: rgba(30, 64, 175, 0.08); color: #1E40AF; }
+
+.ad-tier--premium .ad-tier__title { background: linear-gradient(135deg, #16A34A 0%, #15803D 100%); }
+.ad-tier--premium .ad-tier__features li::before { color: #16A34A; }
+
+/* Why us / EEAT cards */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin: 28px 0;
+}
+.why-card {
+  padding: 24px 22px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.2s, transform 0.2s;
+}
+.why-card:hover { border-color: var(--brand-primary); transform: translateY(-2px); }
+.why-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: #EFF6FF;
+  color: var(--brand-primary);
+  border-radius: 12px;
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+.why-card h3 { margin: 0 0 8px; font-size: 17px; color: var(--text-primary); }
+.why-card p { margin: 0; font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+/* Trust badges row */
+.trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 20px 24px;
+  margin: 24px 0;
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+.trust-badge strong { color: var(--text-primary); }
+
+/* Pricing CTA section */
+.pricing-cta {
+  margin-top: 40px;
+  padding: 36px 32px;
+  background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%);
+  color: white;
+  border-radius: var(--radius-xl);
+  text-align: center;
+}
+.pricing-cta h3 { color: white; margin: 0 0 12px; font-size: 24px; }
+.pricing-cta p { color: rgba(255,255,255,0.85); margin: 0 0 22px; }
+.pricing-cta .btn { background: white; color: var(--brand-primary); border-color: white; }
+.pricing-cta .btn:hover { background: #EFF6FF; }
+.pricing-cta .btn-outline { background: transparent; color: white; border-color: rgba(255,255,255,0.5); }
+.pricing-cta .btn-outline:hover { background: rgba(255,255,255,0.1); }
+
+@media (max-width: 720px) {
+  .ad-tier { grid-template-columns: 1fr; }
+  .ad-tier__sidebar { padding: 24px 20px; }
+  .ad-tier__pricing { padding: 20px; }
+  .ad-tier__price-row { padding: 14px 16px; }
+  .ad-tier__price { font-size: 18px; }
+  .pricing-cta { padding: 28px 20px; }
+  .pricing-cta h3 { font-size: 20px; }
+}
