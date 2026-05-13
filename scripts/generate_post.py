@@ -862,9 +862,11 @@ def update_magazine_index() -> None:
 INDEXNOW_KEY = "albago1697b88e2c3b4f48a17e5d29c8a3e4b1"
 INDEXNOW_KEY_LOCATION = f"{DOMAIN}/{INDEXNOW_KEY}.txt"
 INDEXNOW_ENDPOINTS = [
-    "https://api.indexnow.org/indexnow",
-    "https://www.bing.com/indexnow",
-    "https://yandex.com/indexnow",
+    "https://api.indexnow.org/indexnow",          # 마스터 (참여 엔진에 자동 전파)
+    "https://www.bing.com/indexnow",              # Microsoft Bing
+    "https://yandex.com/indexnow",                # Yandex
+    "https://searchadvisor.naver.com/indexnow",   # Naver
+    "https://search.seznam.cz/indexnow",          # Seznam (체코)
 ]
 
 
