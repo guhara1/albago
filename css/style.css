@@ -2677,3 +2677,159 @@ body.guide-page {
   .guide-page .article h2 { font-size: 19px; }
   .salary-table th, .salary-table td { padding: 10px 12px; font-size: 13.5px; }
 }
+
+/* =====================================================================
+   Magazine post bottom: replace generic site explorer grid
+   ===================================================================== */
+
+/* Topic CTA banner */
+.post-cta-banner {
+  background: linear-gradient(135deg, #1E40AF 0%, #2563EB 100%);
+  color: white;
+  border-radius: var(--radius-lg);
+  padding: 30px 34px;
+  margin: 24px 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  box-shadow: 0 8px 24px rgba(30, 64, 175, 0.18);
+  position: relative;
+  overflow: hidden;
+}
+.post-cta-banner::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.16) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.post-cta-banner__text {
+  flex: 1 1 260px;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+.post-cta-banner__title {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 6px;
+  color: white;
+  letter-spacing: -0.4px;
+  border: none !important;
+  padding: 0 !important;
+  background: none !important;
+}
+.post-cta-banner__lead {
+  font-size: 14.5px;
+  line-height: 1.65;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+}
+.post-cta-banner__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+.post-cta-banner__actions .btn {
+  background: white;
+  color: var(--brand-primary);
+  border-color: white;
+}
+.post-cta-banner__actions .btn:hover {
+  background: #EFF6FF;
+  color: var(--brand-primary);
+}
+.post-cta-banner__actions .btn-outline {
+  background: transparent;
+  color: white;
+  border-color: rgba(255, 255, 255, 0.55);
+}
+.post-cta-banner__actions .btn-outline:hover {
+  background: white;
+  color: var(--brand-primary);
+}
+
+/* Editorial signature + Next up (2-col slim) */
+.post-meta-rows {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 20px 0;
+}
+.post-meta-card {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+}
+.post-meta-card__eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--brand-primary);
+  margin-bottom: 8px;
+}
+.post-meta-card__body {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #475569;
+}
+.post-meta-card__body strong { color: #0F172A; }
+.post-meta-card__body a {
+  color: #0F172A;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s, color 0.15s;
+}
+.post-meta-card__body a:hover {
+  color: var(--brand-primary);
+  border-bottom-color: var(--brand-primary);
+}
+
+/* Slim text-only related links row (for SEO internal linking) */
+.post-related-inline {
+  margin: 8px 0 36px;
+  padding: 14px 18px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 13.5px;
+  color: var(--text-muted);
+  display: flex;
+  gap: 4px 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  line-height: 1.8;
+}
+.post-related-inline__label {
+  font-weight: 700;
+  color: #334155;
+  margin-right: 4px;
+}
+.post-related-inline a {
+  color: var(--brand-primary);
+  text-decoration: none;
+}
+.post-related-inline a:hover { text-decoration: underline; }
+.post-related-inline .sep {
+  color: #CBD5E1;
+  font-weight: 400;
+}
+
+@media (max-width: 720px) {
+  .post-cta-banner { padding: 22px 20px; gap: 16px; }
+  .post-cta-banner__title { font-size: 18px; }
+  .post-cta-banner__actions { width: 100%; }
+  .post-cta-banner__actions .btn { flex: 1 1 auto; justify-content: center; }
+  .post-meta-rows { grid-template-columns: 1fr; gap: 10px; }
+}
