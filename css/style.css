@@ -155,12 +155,12 @@ img { max-width: 100%; display: block; }
 
 /* Logo image (replaces text logo in header) */
 .brand-img {
-  height: 44px;
+  height: 60px;
   width: auto;
   display: block;
 }
 @media (max-width: 720px) {
-  .brand-img { height: 36px; }
+  .brand-img { height: 48px; }
 }
 
 /* Nav */
