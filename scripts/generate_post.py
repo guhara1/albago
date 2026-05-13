@@ -329,6 +329,9 @@ def render_html(topic: dict, article: dict, slug: str, post_url: str) -> str:
     iso = now.strftime("%Y-%m-%dT%H:%M:%S+09:00")
     date_korean = now.strftime("%Y년 %m월 %d일")
 
+    related_label = topic.get("related_label", "구직 가이드")
+    category = topic.get("category", "매거진")
+
     sections_html = "\n".join(
         f'  <section id="sec-{i}">\n'
         f'    <h2 id="h2-{i}">{esc(article[f"h2_{i}"])}</h2>\n'
@@ -358,9 +361,6 @@ def render_html(topic: dict, article: dict, slug: str, post_url: str) -> str:
     <span class="chip">읽는 데 약 {read_minutes}분</span>
     <span class="chip">{date_korean}</span>
   </div>'''
-
-    related_label = topic.get("related_label", "구직 가이드")
-    category = topic.get("category", "매거진")
 
     # 관련 링크 카드 그리드 마크업 — href 패턴으로 카테고리/아이콘 자동 매핑
     def _classify(href: str) -> tuple[str, str, str]:
