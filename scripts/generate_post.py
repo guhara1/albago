@@ -34,7 +34,7 @@ MAGAZINE_INDEX = ROOT / "magazine" / "index.html"
 SITEMAP = ROOT / "sitemap.xml"
 MAGAZINE_RSS = ROOT / "magazine" / "rss.xml"
 
-MODEL = os.environ.get("CLAUDE_MODEL", "claude-opus-4-5")
+MODEL = os.environ.get("CLAUDE_MODEL", "claude-opus-4-7")
 
 BANNED_TERMS = [
     "1등", "최고의", "100%", "완벽", "보장", "베스트", "1위",
