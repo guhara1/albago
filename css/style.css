@@ -1213,12 +1213,14 @@ details.faq p {
 
 /* Banner card */
 .banner {
-  display: block;
+  display: flex;
+  flex-direction: column;
   border-radius: 10px;
   overflow: hidden;
   background: white;
   transition: all 0.2s ease;
   border: 1px solid var(--border);
+  height: 100%;
 }
 .banner:hover {
   text-decoration: none;
@@ -1235,7 +1237,8 @@ details.faq p {
   text-align: center;
   color: white;
   padding: 24px 16px;
-  min-height: 140px;
+  height: 160px;
+  flex-shrink: 0;
   background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
 }
 .banner__visual::after {
@@ -1275,9 +1278,19 @@ details.faq p {
   border-radius: var(--radius-full);
   position: relative;
   z-index: 1;
+  max-width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .banner__info {
   padding: 12px 14px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+.banner__info .banner__tags {
+  margin-top: auto;
 }
 .banner__cat {
   font-size: 12px;
