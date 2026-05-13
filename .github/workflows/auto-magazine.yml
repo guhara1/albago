@@ -1,0 +1,62 @@
+name: Auto Magazine Post (Weekly)
+
+on:
+  schedule:
+    # 매주 월요일 오전 9시 KST (= 일요일 24:00 UTC = 월요일 00:00 UTC)
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: magazine-auto
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Generate magazine post
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL || 'claude-opus-4-5' }}
+        run: python scripts/generate_post.py
+
+      - name: Commit and push
+        id: commit
+        run: |
+          git config user.name "Magazine Bot"
+          git config user.email "bot@albago.pages.dev"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            echo "pushed=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          git commit -m "magazine: $(date +'%Y-%m-%d') 주간 자동 발행"
+          git push
+          echo "pushed=true" >> $GITHUB_OUTPUT
+
+      - name: Wait for Cloudflare Pages deploy
+        if: steps.commit.outputs.pushed == 'true'
+        run: sleep 90
+
+      - name: Re-ping sitemap after deploy
+        if: steps.commit.outputs.pushed == 'true'
+        run: |
+          curl -s -o /dev/null -w "Google sitemap ping: %{http_code}\n" \
+            "https://www.google.com/ping?sitemap=https://albago.pages.dev/sitemap.xml" || true
+          curl -s -o /dev/null -w "Bing sitemap ping: %{http_code}\n" \
+            "https://www.bing.com/ping?sitemap=https://albago.pages.dev/sitemap.xml" || true
