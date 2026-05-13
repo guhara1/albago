@@ -1105,11 +1105,12 @@ details.faq p {
 }
 .tier-head {
   display: flex;
-  align-items: baseline;
-  gap: 10px;
-  margin-bottom: 18px;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
   padding-bottom: 14px;
   border-bottom: 2px solid var(--bg-muted);
+  flex-wrap: wrap;
 }
 .tier-title {
   font-size: 20px;
@@ -1118,9 +1119,46 @@ details.faq p {
   letter-spacing: -0.5px;
 }
 .tier-tag {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-light);
-  font-weight: 500;
+  font-weight: 600;
+  background: var(--bg-muted);
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-left: auto;
+}
+
+/* Tier badges (VVIP 👑 / VIP 💎) */
+.tier-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.tier-badge--vvip {
+  background: linear-gradient(135deg, #C77F00 0%, #FFC93C 50%, #B45309 100%);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+.tier-badge--vip {
+  background: linear-gradient(135deg, #6366F1 0%, #3B82F6 50%, #1E40AF 100%);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Tier section accent */
+.tier--vvip {
+  position: relative;
+}
+.tier--vvip .tier-head {
+  border-bottom-color: rgba(199, 127, 0, 0.3);
+}
+.tier--vip .tier-head {
+  border-bottom-color: rgba(99, 102, 241, 0.3);
 }
 
 .tier-grid {
