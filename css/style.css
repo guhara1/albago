@@ -786,52 +786,84 @@ details.faq p {
 }
 .trust-item__body strong { color: var(--text-primary); }
 
-/* ===== Footer ===== */
+/* ===== Footer (SEO/E-E-A-T optimized) ===== */
 .site-footer {
   background: var(--bg-dark);
   color: #CBD5E1;
   padding: 56px 0 24px;
+  margin-top: 40px;
 }
 .site-footer a {
   color: #CBD5E1;
+  transition: color 0.15s;
 }
 .site-footer a:hover {
   color: white;
+  text-decoration: none;
 }
+
+/* Grid: brand col wider + 4 nav cols */
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 40px;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+  gap: 36px;
+  margin-bottom: 36px;
 }
-.footer-brand {
-  font-weight: 700;
-  font-size: 20px;
-  margin-bottom: 12px;
-  color: white;
+
+/* Brand column */
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-.footer-brand .brand-logo {
-  background: linear-gradient(135deg, #3B82F6, #60A5FA);
+.footer-brand-link {
+  display: inline-block;
+  line-height: 0;
 }
-/* Footer logo image (replaces text logo in footer) */
 .footer-logo-img {
-  height: 36px;
+  height: 40px;
   width: auto;
   display: block;
-  margin-bottom: 8px;
 }
-.footer-grid p {
+.footer-tagline {
   color: #94A3B8;
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 13.5px;
+  line-height: 1.65;
+  margin: 0;
 }
-.footer-nav h4 {
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13px;
+}
+.footer-contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #E2E8F0;
+  font-weight: 600;
+}
+.footer-contact a:hover { color: white; }
+.footer-contact__hours {
+  display: block;
+  font-size: 11.5px;
+  color: #64748B;
+  margin-top: 2px;
+  margin-left: 24px;
+}
+
+/* Nav columns */
+.footer-nav__title {
   color: white;
-  font-size: 14px;
-  font-weight: 700;
-  margin: 0 0 16px;
+  font-size: 12.5px;
+  font-weight: 800;
+  margin: 0 0 14px;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 .footer-nav ul {
   list-style: none;
@@ -839,20 +871,115 @@ details.faq p {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 9px;
 }
-.footer-nav a {
-  font-size: 14px;
+.footer-nav li a {
+  font-size: 13.5px;
+  color: #94A3B8;
+  display: inline-block;
+  padding: 2px 0;
+}
+.footer-nav li a:hover { color: white; }
+
+/* Business info (NAP — name/address/phone for local SEO) */
+.footer-business {
+  border-top: 1px solid #1E293B;
+  border-bottom: 1px solid #1E293B;
+  padding: 20px 0;
+  margin-bottom: 18px;
+  font-style: normal;
+}
+.footer-business__info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 8px 28px;
+  margin: 0;
+  font-size: 12.5px;
+}
+.footer-business__row {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+.footer-business__row dt {
+  color: #64748B;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 110px;
+}
+.footer-business__row dd {
+  margin: 0;
+  color: #CBD5E1;
+  word-break: keep-all;
+}
+.footer-business__row dd a { color: #93C5FD; }
+.footer-business__row dd a:hover { color: white; }
+.footer-business__muted { color: #64748B; }
+
+/* Bottom: legal nav + copyright */
+.footer-bottom {
+  padding-top: 14px;
+  text-align: center;
+}
+.footer-legal-nav {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 12.5px;
+  margin-bottom: 10px;
+}
+.footer-legal-nav a {
   color: #94A3B8;
 }
-.footer-bottom {
-  border-top: 1px solid #1E293B;
-  padding-top: 24px;
-  text-align: center;
-  font-size: 13px;
-  color: #64748B;
+.footer-legal-nav .sep {
+  color: #475569;
 }
-.footer-bottom p { margin: 0; color: inherit; }
+.footer-trust-line {
+  font-size: 11.5px;
+  color: #64748B;
+  margin: 0 0 6px;
+  line-height: 1.5;
+}
+.footer-copyright {
+  font-size: 12px;
+  color: #64748B;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .footer-brand-col {
+    grid-column: 1 / -1;
+  }
+  .footer-business__info {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 720px) {
+  .site-footer {
+    padding: 40px 0 20px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .footer-brand-col {
+    grid-column: 1 / -1;
+  }
+  .footer-business__info {
+    grid-template-columns: 1fr;
+  }
+  .footer-business__row dt {
+    min-width: 96px;
+    font-size: 12px;
+  }
+}
 
 /* ===== Forms (for resume/employer signup info) ===== */
 .form-group {
@@ -1596,8 +1723,7 @@ details.faq p {
 }
 
 /* Footer business info */
-.footer-bottom p { margin: 4px 0; }
-.footer-bottom p.footer-legal { color: #9ca3af; font-size: 13px; line-height: 1.6; }
+/* (deprecated old footer-bottom rules removed in feat/footer-seo-overhaul) */
 
 /* =====================================================================
    Ad tier pricing (광고 상품 안내)
