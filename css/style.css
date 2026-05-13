@@ -1112,53 +1112,54 @@ details.faq p {
   color: var(--text-primary);
   letter-spacing: -0.5px;
   position: relative;
-  padding-left: 30px;
+  padding-right: 30px;
   display: inline-block;
 }
-.tier-title::before {
-  content: "✨";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 22px;
-  animation: tier-twinkle 2.2s ease-in-out infinite;
-  filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.55));
-}
 .tier-title::after {
-  content: "✦";
+  content: "";
   position: absolute;
-  left: 16px;
-  top: 0;
-  font-size: 10px;
-  color: #F59E0B;
-  animation: tier-twinkle-sm 1.6s ease-in-out 0.4s infinite;
+  right: 0;
+  top: 50%;
+  font-size: 18px;
+  line-height: 1;
+  transform: translateY(-50%);
+  animation: tier-float 2.8s ease-in-out infinite;
+  will-change: transform, filter;
 }
-.tier:has(.banner-vvip) .tier-title::before {
-  filter: drop-shadow(0 0 8px rgba(180, 83, 9, 0.85));
+.tier:has(.banner-vvip) .tier-title::after {
+  content: "👑";
+  animation: tier-float 2.8s ease-in-out infinite,
+             tier-glow-vvip 2.8s ease-in-out infinite;
 }
-.tier:has(.banner-vvip) .tier-title::after { color: #B45309; }
-.tier:has(.banner-vip) .tier-title::before {
-  filter: drop-shadow(0 0 6px rgba(30, 64, 175, 0.7));
+.tier:has(.banner-vip) .tier-title::after {
+  content: "💎";
+  animation: tier-float 2.8s ease-in-out infinite,
+             tier-glow-vip 2.8s ease-in-out infinite;
 }
-.tier:has(.banner-vip) .tier-title::after { color: #1E40AF; }
-.tier:has(.banner-premium) .tier-title::before {
-  filter: drop-shadow(0 0 5px rgba(22, 163, 74, 0.7));
+.tier:has(.banner-premium) .tier-title::after {
+  content: "⭐";
+  animation: tier-float 2.8s ease-in-out infinite,
+             tier-glow-premium 2.8s ease-in-out infinite;
 }
-.tier:has(.banner-premium) .tier-title::after { color: #16A34A; }
 
-@keyframes tier-twinkle {
-  0%, 100% { opacity: 1; transform: translateY(-50%) scale(1) rotate(0deg); }
-  35%      { opacity: 0.55; transform: translateY(-50%) scale(0.85) rotate(-8deg); }
-  65%      { opacity: 1; transform: translateY(-50%) scale(1.08) rotate(6deg); }
+@keyframes tier-float {
+  0%, 100% { transform: translateY(-50%); }
+  50%      { transform: translateY(calc(-50% - 3px)); }
 }
-@keyframes tier-twinkle-sm {
-  0%, 100% { opacity: 0.2; transform: scale(0.7); }
-  50%      { opacity: 1;   transform: scale(1.15); }
+@keyframes tier-glow-vvip {
+  0%, 100% { filter: drop-shadow(0 1px 2px rgba(180, 83, 9, 0.25)); }
+  50%      { filter: drop-shadow(0 2px 8px rgba(180, 83, 9, 0.65)); }
+}
+@keyframes tier-glow-vip {
+  0%, 100% { filter: drop-shadow(0 1px 2px rgba(30, 64, 175, 0.22)); }
+  50%      { filter: drop-shadow(0 2px 8px rgba(30, 64, 175, 0.6)); }
+}
+@keyframes tier-glow-premium {
+  0%, 100% { filter: drop-shadow(0 1px 2px rgba(22, 163, 74, 0.22)); }
+  50%      { filter: drop-shadow(0 2px 8px rgba(22, 163, 74, 0.6)); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .tier-title::before,
-  .tier-title::after { animation: none; }
+  .tier-title::after { animation: none !important; }
 }
 .tier-tag {
   font-size: 12px;
