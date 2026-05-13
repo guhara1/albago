@@ -1,30 +1,116 @@
 # robots.txt for massagealbago.kr (정식 도메인)
-# 전국 마사지 구인구직 플랫폼
+# 전국 마사지·스파·테라피 구인구직 플랫폼
 
+# ============================================
+# 검색엔진 봇 — 명시 허용 (최우선 보장)
+# ============================================
 User-agent: Googlebot
 Allow: /
 
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+# 네이버
 User-agent: Yeti
 Allow: /
 
+User-agent: Yeti-Mobile
+Allow: /
+
+User-agent: NaverBot
+Allow: /
+
+# Bing / Microsoft
 User-agent: bingbot
 Allow: /
 
+User-agent: msnbot
+Allow: /
+
+# 다음
 User-agent: Daumoa
 Allow: /
 
+# Apple Spotlight
+User-agent: Applebot
+Allow: /
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# ============================================
+# AI / 생성형 검색 봇 — 명시 허용
+# (ChatGPT / Claude / Perplexity 노출 유리)
+# ============================================
 User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: anthropic-ai
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Applebot
+User-agent: Google-Extended
 Allow: /
 
+User-agent: CCBot
+Allow: /
+
+# ============================================
+# 소셜 미디어 봇 — OG 카드 정상 노출용
+# ============================================
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: KakaoTalk-scrap
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# ============================================
+# SEO 분석 / 스크래퍼 — 차단
+# (사이트 부하 + 경쟁사 분석 자료 노출 방지)
+# ============================================
 User-agent: AhrefsBot
 Disallow: /
 
@@ -34,8 +120,30 @@ Disallow: /
 User-agent: MJ12bot
 Disallow: /
 
+User-agent: DotBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+# ============================================
+# 그 외 모든 봇 — 기본 허용
+# ============================================
 User-agent: *
 Allow: /
 Crawl-delay: 1
 
+# ============================================
+# Sitemap 및 RSS 피드
+# ============================================
 Sitemap: https://massagealbago.kr/sitemap.xml
+Sitemap: https://massagealbago.kr/magazine/rss.xml
