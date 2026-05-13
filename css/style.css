@@ -125,7 +125,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 90px;
   gap: 24px;
 }
 .brand {
@@ -155,7 +155,7 @@ img { max-width: 100%; display: block; }
 
 /* Logo image (replaces text logo in header) */
 .brand-img {
-  height: 60px;
+  height: 70px;
   width: auto;
   display: block;
 }
