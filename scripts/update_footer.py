@@ -1,66 +1,23 @@
-<!doctype html>
-<html lang="ko">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>페이지를 찾을 수 없습니다 (404) | 마사지알바고</title>
-<meta name="robots" content="noindex" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="stylesheet" href="/css/style.css" />
-</head>
-<body>
-<div class="topbar"><div class="container">
-  <a href="/guide/index.html">이용 안내</a>
-  <a href="/support/index.html#safety">안전 가이드</a>
-  <a href="/partners/index.html">제휴 문의</a>
-</div></div>
-<header class="site-header"><div class="container header-inner">
-  <a href="/index.html" class="brand"><img src="/images/logo/logo.png" alt="마사지알바GO" class="brand-img" /></a>
-  <nav class="main-nav" aria-label="주메뉴">
-    <a href="/jobs/index.html">구인공고</a>
-    <a href="/partner-stores/index.html">제휴업소</a>
-    <a href="/ads/index.html">상품안내</a>
-    <a href="/resumes/index.html">이력서 등록</a>
-    <a href="/partners/index.html">업체 가입</a>
-    <a href="/guide/index.html">시술별 가이드</a>
-    <a href="/magazine/index.html">매거진</a>
-    <a href="/about/index.html">소개</a>
-  </nav>
-  <div class="header-cta">
-    <a href="/jobs/index.html" class="btn btn-primary">구인공고 보기</a>
-  </div>
-</div></header>
+#!/usr/bin/env python3
+"""
+모든 HTML 파일의 <footer class="site-footer"> 블록을 SEO/E-E-A-T 강화 푸터로 교체.
 
-<section class="page-header"><div class="container">
-  <h1>페이지를 찾을 수 없습니다</h1>
-  <p>요청하신 페이지가 존재하지 않거나 이동되었습니다. 아래에서 원하시는 정보를 찾아보세요.</p>
-</div></section>
+- 절대 경로(`/`) 사용 — 페이지 깊이 무관
+- 시맨틱 HTML: <footer role="contentinfo"> / <address> / <time>
+- Schema.org Microdata: Organization + PostalAddress
+- NAP 명확 표기 (Name·Address·Phone) — 로컬 SEO
+- 사업자 정보 + 직업정보제공사업 신고번호 (신뢰)
+- 정책·약관·사이트맵·RSS 링크 (Discoverability)
+- 카테고리 그룹 (구인구직 / 가이드 / 지역 / 정보)
+"""
 
-<div class="article container container-narrow">
-  <div class="grid cols-2" style="margin-top:24px;">
-    <a href="/jobs/index.html" class="card" style="text-decoration:none;color:inherit;">
-      <h3>🔍 구인공고 둘러보기</h3>
-      <p>전국 17개 시·도, 메트로권 자치구·시·군별 채용 공고를 확인하세요.</p>
-    </a>
-    <a href="/resumes/index.html" class="card" style="text-decoration:none;color:inherit;">
-      <h3>📝 이력서 등록</h3>
-      <p>경력·자격증·희망 지역을 등록하시면 검증된 매장에서 먼저 연락드립니다.</p>
-    </a>
-    <a href="/partner-stores/index.html" class="card" style="text-decoration:none;color:inherit;">
-      <h3>🏪 제휴업소</h3>
-      <p>마사지알바고와 제휴한 검증된 매장을 한 곳에서.</p>
-    </a>
-    <a href="/inquiry/index.html" class="card" style="text-decoration:none;color:inherit;">
-      <h3>💬 문의하기</h3>
-      <p>전화 0508-202-4690 또는 광고 신청 폼으로 문의해 주세요.</p>
-    </a>
-  </div>
-  <p style="margin-top:32px;text-align:center;">
-    <a href="/" class="btn btn-primary">홈으로 돌아가기 →</a>
-  </p>
-</div>
+from __future__ import annotations
+import re
+from pathlib import Path
 
-<footer class="site-footer" role="contentinfo">
+ROOT = Path(__file__).resolve().parent.parent
+
+NEW_FOOTER = '''<footer class="site-footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand-col">
@@ -169,6 +126,44 @@
       <p class="footer-copyright">© <time datetime="2026">2026</time> 마사지알바고 · YH LAB. All rights reserved.</p>
     </div>
   </div>
-</footer>
-</body>
-</html>
+</footer>'''
+
+FOOTER_RE = re.compile(
+    r'<footer[^>]*class="[^"]*site-footer[^"]*"[^>]*>.*?</footer>',
+    re.DOTALL,
+)
+
+
+def find_html_files() -> list[Path]:
+    return [
+        p for p in ROOT.rglob("*.html")
+        if ".git" not in p.parts and "node_modules" not in p.parts
+    ]
+
+
+def main() -> int:
+    files = find_html_files()
+    changed = 0
+    skipped = 0
+    no_footer = 0
+    for f in files:
+        html = f.read_text(encoding="utf-8")
+        if 'class="site-footer"' not in html:
+            no_footer += 1
+            continue
+        new_html, n = FOOTER_RE.subn(NEW_FOOTER, html, count=1)
+        if n == 0:
+            skipped += 1
+            continue
+        if new_html != html:
+            f.write_text(new_html, encoding="utf-8")
+            changed += 1
+    print(f"changed: {changed}")
+    print(f"skipped: {skipped}")
+    print(f"no footer: {no_footer}")
+    print(f"total scanned: {len(files)}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
