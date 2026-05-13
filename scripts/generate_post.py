@@ -634,8 +634,6 @@ def update_magazine_index() -> None:
       <span><strong>{len(posts)}</strong>편 게시</span>
       <span class="dot"></span>
       <span>매주 월요일 1편 자동 업데이트</span>
-      <span class="dot"></span>
-      <span><strong>{total_unused}</strong>편 발행 예정</span>
     </div>
     {chips_block}
   </div>
