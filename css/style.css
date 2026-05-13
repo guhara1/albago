@@ -167,16 +167,21 @@ img { max-width: 100%; display: block; }
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   flex: 1;
+  flex-wrap: nowrap;
+  min-width: 0;
+  justify-content: center;
 }
 .main-nav a {
   display: inline-block;
-  padding: 10px 14px;
+  padding: 10px 12px;
   border-radius: var(--radius-md);
-  font-size: 15px;
+  font-size: 14.5px;
   font-weight: 600;
   color: var(--text-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .main-nav a:hover {
   background: var(--bg-soft);
@@ -186,6 +191,14 @@ img { max-width: 100%; display: block; }
 .main-nav a.active {
   color: var(--brand-primary);
   background: rgba(30, 64, 175, 0.08);
+}
+
+/* 좁은 데스크톱(900~1180px)에서 브랜드 로고를 약간 줄여 메뉴가 한 줄에 들어오도록 */
+@media (max-width: 1180px) and (min-width: 901px) {
+  .brand-img { height: 56px; }
+  .header-inner { gap: 16px; height: 80px; }
+  .main-nav a { padding: 8px 10px; font-size: 14px; }
+  .header-cta .btn { padding: 8px 14px; font-size: 14px; }
 }
 
 /* Header CTA */
