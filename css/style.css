@@ -1112,13 +1112,13 @@ details.faq p {
   color: var(--text-primary);
   letter-spacing: -0.5px;
   position: relative;
-  padding-right: 30px;
+  padding-left: 30px;
   display: inline-block;
 }
 .tier-title::after {
   content: "";
   position: absolute;
-  right: 0;
+  left: 0;
   top: 50%;
   font-size: 18px;
   line-height: 1;
