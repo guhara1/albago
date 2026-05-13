@@ -588,102 +588,172 @@ def list_posts() -> list[dict]:
     return posts
 
 
+def _cat_slug(cat: str) -> str:
+    """카테고리 이름을 CSS 클래스용 슬러그로 (공백 제거)."""
+    return (cat or "default").replace(" ", "").replace("·", "").strip() or "default"
+
+
+def _read_min(desc: str) -> int:
+    """본문 분량에서 대략 읽기 시간(분) 추정. 인덱스에선 description 만 가지므로
+    description 길이로 근사하지 않고 기본 5분 표기."""
+    return 5
+
+
 def update_magazine_index() -> None:
     posts = list_posts()
-    if not posts:
-        return
-    featured = posts[0]
-    others = posts[1:13]
 
-    feat_html = f'''<section class="section">
+    # 큐에서 곧 발행될 토픽 / 남은 전체 토픽 수
+    upcoming: list[dict] = []
+    total_unused = 0
+    try:
+        queue = load_queue()
+        unused_all = [t for t in queue.get("topics", []) if not t.get("used")]
+        upcoming = unused_all[:3]
+        total_unused = len(unused_all)
+    except Exception:
+        pass
+
+    # 카테고리 칩 모음 (이미 발행된 글 + 예정 토픽에서 unique)
+    cats_seen: list[str] = []
+    for p in posts:
+        c = p.get("category", "매거진")
+        if c not in cats_seen:
+            cats_seen.append(c)
+    for t in upcoming:
+        c = t.get("category", "매거진")
+        if c not in cats_seen:
+            cats_seen.append(c)
+    chip_html = " ".join(
+        f'<span class="mag-hero__chip">{esc(c)}</span>' for c in cats_seen[:8]
+    )
+    chips_block = f'<div class="mag-hero__chips">{chip_html}</div>' if chip_html else ''
+
+    hero_html = f'''<section class="mag-hero">
   <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">📌 Featured</span>
-      <h2>가장 최근 글</h2>
+    <div class="mag-hero__stats">
+      <span><strong>{len(posts)}</strong>편 게시</span>
+      <span class="dot"></span>
+      <span>매주 월요일 1편 자동 업데이트</span>
+      <span class="dot"></span>
+      <span><strong>{total_unused}</strong>편 발행 예정</span>
     </div>
-    <a href="posts/{featured["slug"]}.html" class="card" style="display:block; text-decoration:none;">
-      <div class="card-icon">✍️</div>
-      <h3>{esc(featured["title"])}</h3>
-      <p>{esc(featured["description"])}</p>
-      <p class="post-meta" style="margin-top:8px; font-size:13px; color:#64748B;">{esc(featured["date"])} · {esc(featured["category"])}</p>
+    {chips_block}
+  </div>
+</section>'''
+
+    if not posts:
+        # 글이 아예 없을 때: hero + coming만
+        body_blocks = [hero_html]
+    else:
+        featured = posts[0]
+        others = posts[1:13]
+        f_cat = featured.get("category", "매거진")
+        f_slug_cls = _cat_slug(f_cat)
+        feat_html = f'''<section class="mag-section">
+  <div class="container">
+    <div class="mag-section__head">
+      <span class="mag-section__eyebrow">📌 Featured</span>
+      <h2 class="mag-section__title">가장 최근 글</h2>
+      <span class="mag-section__sub">방금 올라온 따끈한 글</span>
+    </div>
+    <a href="posts/{featured["slug"]}.html" class="mag-featured">
+      <div class="mag-featured__visual mag-bg--{f_slug_cls}">
+        <span class="mag-featured__cat">{esc(f_cat)}</span>
+        <h3>{esc(featured["title"])}</h3>
+      </div>
+      <div class="mag-featured__body">
+        <p>{esc(featured["description"])}</p>
+        <div class="mag-featured__meta">
+          <span>{esc(featured["date"])}</span>
+          <span class="dot"></span>
+          <span>약 5분 읽기</span>
+          <span class="mag-featured__cta">글 읽기 →</span>
+        </div>
+      </div>
     </a>
   </div>
 </section>'''
 
-    if others:
-        cards = "\n".join(
-            f'      <a href="posts/{p["slug"]}.html" class="card" style="display:block; text-decoration:none;">\n'
-            f'        <div class="card-icon amber">📰</div>\n'
-            f'        <h3>{esc(p["title"])}</h3>\n'
-            f'        <p>{esc(p["description"][:120])}</p>\n'
-            f'        <p class="post-meta" style="margin-top:8px; font-size:13px; color:#64748B;">{esc(p["date"])} · {esc(p["category"])}</p>\n'
-            f'      </a>'
-            for p in others
-        )
-        grid_section = f'''
-<section class="section">
+        if others:
+            cards = "\n".join(
+                f'      <a href="posts/{p["slug"]}.html" class="mag-card">\n'
+                f'        <div class="mag-card__visual mag-bg--{_cat_slug(p.get("category","매거진"))}">\n'
+                f'          <span class="mag-card__cat">{esc(p.get("category","매거진"))}</span>\n'
+                f'        </div>\n'
+                f'        <div class="mag-card__body">\n'
+                f'          <h3>{esc(p["title"])}</h3>\n'
+                f'          <p>{esc(p["description"][:140])}</p>\n'
+                f'          <div class="mag-card__meta">\n'
+                f'            <span>{esc(p["date"])}</span>\n'
+                f'            <span class="dot"></span>\n'
+                f'            <span>약 5분 읽기</span>\n'
+                f'          </div>\n'
+                f'        </div>\n'
+                f'      </a>'
+                for p in others
+            )
+            grid_section = f'''
+<section class="mag-section">
   <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Latest</span>
-      <h2>최근 매거진 글</h2>
-      <p>매주 월요일 오전에 새 글이 한 편씩 올라옵니다.</p>
+    <div class="mag-section__head">
+      <span class="mag-section__eyebrow">Latest</span>
+      <h2 class="mag-section__title">최근 매거진 글</h2>
+      <span class="mag-section__sub">새 글은 매주 월요일 오전</span>
     </div>
-    <div class="grid cols-3">
+    <div class="mag-card-grid">
 {cards}
     </div>
   </div>
 </section>'''
-    else:
-        grid_section = ""
+        else:
+            grid_section = ""
 
-    # Coming Soon — show next 3 unused topics
+        body_blocks = [hero_html, feat_html, grid_section]
+
     coming_section = ""
-    try:
-        queue = load_queue()
-        upcoming = [t for t in queue.get("topics", []) if not t.get("used")][:3]
-    except Exception:
-        upcoming = []
     if upcoming:
         coming_cards = "\n".join(
-            f'      <div class="card">\n'
-            f'        <div class="card-icon green">🗓</div>\n'
-            f'        <h3>{esc(t["title"])}</h3>\n'
-            f'        <p>{esc((t.get("scenario") or t.get("search_intent", ""))[:120])}</p>\n'
-            f'        <p class="post-meta" style="margin-top:8px; font-size:13px; color:#64748B;">발행 예정 · {esc(t.get("category","매거진"))}</p>\n'
+            f'      <div class="mag-card mag-card--coming">\n'
+            f'        <div class="mag-card__visual mag-bg--{_cat_slug(t.get("category","매거진"))}">\n'
+            f'          <span class="mag-card__cat">{esc(t.get("category","매거진"))}</span>\n'
+            f'        </div>\n'
+            f'        <div class="mag-card__body">\n'
+            f'          <h3>{esc(t["title"])}</h3>\n'
+            f'          <p>{esc((t.get("scenario") or t.get("search_intent", ""))[:140])}</p>\n'
+            f'          <div class="mag-card__meta">\n'
+            f'            <span>🗓 발행 예정</span>\n'
+            f'          </div>\n'
+            f'        </div>\n'
             f'      </div>'
             for t in upcoming
         )
         coming_section = f'''
-<section class="section section-soft">
+<section class="mag-section mag-section--coming">
   <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Coming Soon</span>
-      <h2>곧 업데이트될 글</h2>
+    <div class="mag-section__head">
+      <span class="mag-section__eyebrow">🗓 Coming Soon</span>
+      <h2 class="mag-section__title">곧 업데이트될 글</h2>
+      <span class="mag-section__sub">다음 월요일 오전 09:00 KST</span>
     </div>
-    <div class="grid cols-3">
+    <div class="mag-card-grid">
 {coming_cards}
     </div>
   </div>
 </section>'''
 
     block = f'''{INDEX_MARK_START}
-{feat_html}{grid_section}{coming_section}
+{"".join(body_blocks)}{coming_section}
 {INDEX_MARK_END}'''
 
     html = MAGAZINE_INDEX.read_text(encoding="utf-8")
+    # body 에 magazine-index-page 클래스 추가 (없으면)
+    if "<body class=\"magazine-index-page\">" not in html:
+        html = html.replace("<body>", "<body class=\"magazine-index-page\">", 1)
+
     if INDEX_MARK_START in html and INDEX_MARK_END in html:
         html = re.sub(
             re.escape(INDEX_MARK_START) + r".*?" + re.escape(INDEX_MARK_END),
             block,
-            html,
-            count=1,
-            flags=re.DOTALL,
-        )
-    else:
-        # 페이지 헤더 직후의 첫 <section> 블록을 교체
-        html = re.sub(
-            r"(</section>\s*\n)(<section class=\"section\">.*?</section>\s*<section class=\"section section-soft\">.*?</section>)",
-            r"\1" + block,
             html,
             count=1,
             flags=re.DOTALL,

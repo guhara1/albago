@@ -2087,3 +2087,333 @@ html { scroll-behavior: smooth; }
   .related-section__head { gap: 8px; }
   .related-section__sub { margin-left: 0; }
 }
+
+/* =====================================================================
+   Magazine index page (/magazine/)
+   ===================================================================== */
+body.magazine-index-page {
+  background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 280px, #F8FAFC 600px);
+  background-attachment: fixed;
+}
+.magazine-index-page .page-header {
+  background: transparent;
+  border-bottom: 0;
+  padding: 48px 0 12px;
+}
+
+/* Hero strip */
+.mag-hero {
+  padding: 8px 0 36px;
+}
+.mag-hero__stats {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.mag-hero__stats strong {
+  color: var(--brand-primary);
+  font-weight: 800;
+  margin-right: 2px;
+}
+.mag-hero__stats .dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #CBD5E1;
+  display: inline-block;
+}
+.mag-hero__chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+.mag-hero__chip {
+  display: inline-block;
+  padding: 5px 12px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Section heads */
+.mag-section { padding: 28px 0; }
+.mag-section--coming { padding-top: 12px; }
+.mag-section__head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.mag-section__eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--brand-primary);
+  background: #EFF6FF;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+.mag-section__title {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  color: #0F172A;
+  margin: 0;
+}
+.mag-section__sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+/* Featured hero card */
+.mag-featured {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 0;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+.mag-featured:hover {
+  text-decoration: none;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+  border-color: var(--brand-primary);
+}
+.mag-featured__visual {
+  padding: 36px 32px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 240px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.mag-featured__visual::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  bottom: -60px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(255,255,255,0.18) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.mag-featured__cat {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 5px 12px;
+  background: rgba(255,255,255,0.22);
+  backdrop-filter: blur(4px);
+  border-radius: var(--radius-full);
+  letter-spacing: 0.5px;
+}
+.mag-featured__visual h3 {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.6px;
+  margin: 0;
+  color: white;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.18);
+  word-break: keep-all;
+}
+.mag-featured__body {
+  padding: 32px 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.mag-featured__body p {
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: #334155;
+  margin: 0;
+  word-break: keep-all;
+}
+.mag-featured__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+}
+.mag-featured__meta .dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #CBD5E1;
+  display: inline-block;
+}
+.mag-featured__cta {
+  margin-left: auto;
+  color: var(--brand-primary);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* Card grid */
+.mag-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.mag-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+  text-decoration: none;
+  color: inherit;
+}
+.mag-card:hover {
+  text-decoration: none;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
+  border-color: var(--brand-primary);
+}
+.mag-card__visual {
+  padding: 22px 22px 18px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  min-height: 120px;
+  display: flex;
+  align-items: flex-end;
+}
+.mag-card__visual::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(255,255,255,0.18) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.mag-card__cat {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  background: rgba(255,255,255,0.22);
+  backdrop-filter: blur(4px);
+  border-radius: var(--radius-full);
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+.mag-card__body {
+  padding: 18px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.mag-card__body h3 {
+  font-size: 16.5px;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: -0.3px;
+  color: #0F172A;
+  margin: 0;
+  word-break: keep-all;
+}
+.mag-card__body p {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0;
+  word-break: keep-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.mag-card__meta {
+  margin-top: auto;
+  padding-top: 8px;
+  font-size: 12.5px;
+  color: var(--text-light);
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.mag-card__meta .dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #CBD5E1;
+  display: inline-block;
+}
+
+/* Coming soon variant */
+.mag-card--coming { opacity: 0.86; }
+.mag-card--coming .mag-card__visual { filter: grayscale(0.25); }
+.mag-card--coming .mag-card__meta {
+  color: var(--brand-primary);
+  font-weight: 600;
+}
+
+/* Category background gradients */
+.mag-bg--구인구직   { background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%); }
+.mag-bg--면접       { background: linear-gradient(135deg, #4338CA 0%, #6366F1 100%); }
+.mag-bg--급여       { background: linear-gradient(135deg, #047857 0%, #10B981 100%); }
+.mag-bg--야간근무   { background: linear-gradient(135deg, #1F2937 0%, #475569 100%); }
+.mag-bg--감정노동   { background: linear-gradient(135deg, #BE185D 0%, #EC4899 100%); }
+.mag-bg--프리랜서   { background: linear-gradient(135deg, #C2410C 0%, #F97316 100%); }
+.mag-bg--프리랜서수입관리 { background: linear-gradient(135deg, #C2410C 0%, #F97316 100%); }
+.mag-bg--고객응대   { background: linear-gradient(135deg, #92400E 0%, #F59E0B 100%); }
+.mag-bg--직업정보   { background: linear-gradient(135deg, #0F766E 0%, #14B8A6 100%); }
+.mag-bg--자격증     { background: linear-gradient(135deg, #5B21B6 0%, #8B5CF6 100%); }
+.mag-bg--안전       { background: linear-gradient(135deg, #B91C1C 0%, #EF4444 100%); }
+.mag-bg--커리어     { background: linear-gradient(135deg, #5B21B6 0%, #A78BFA 100%); }
+.mag-bg--근무조건   { background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%); }
+.mag-bg--초보사회생활 { background: linear-gradient(135deg, #6D28D9 0%, #A78BFA 100%); }
+.mag-bg--건강관리   { background: linear-gradient(135deg, #0F766E 0%, #14B8A6 100%); }
+.mag-bg--default    { background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%); }
+
+@media (max-width: 900px) {
+  .mag-featured { grid-template-columns: 1fr; }
+  .mag-featured__visual { min-height: 180px; padding: 28px 24px 22px; }
+  .mag-featured__visual h3 { font-size: 22px; }
+  .mag-featured__body { padding: 24px; }
+  .mag-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .mag-card-grid { grid-template-columns: 1fr; }
+  .mag-hero { padding: 0 0 24px; }
+  .mag-section__head { gap: 10px; }
+  .mag-section__sub { margin-left: 0; width: 100%; }
+}
