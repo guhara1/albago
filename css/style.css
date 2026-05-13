@@ -168,7 +168,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   gap: 2px;
-  flex: 1;
+  flex: 1 1 auto;
   flex-wrap: nowrap;
   min-width: 0;
   justify-content: center;
@@ -180,8 +180,10 @@ img { max-width: 100%; display: block; }
   font-size: 14.5px;
   font-weight: 600;
   color: var(--text-secondary);
-  white-space: nowrap;
+  white-space: nowrap !important;
   flex-shrink: 0;
+  word-break: keep-all;
+  line-height: 1.2;
 }
 .main-nav a:hover {
   background: var(--bg-soft);
@@ -193,12 +195,13 @@ img { max-width: 100%; display: block; }
   background: rgba(30, 64, 175, 0.08);
 }
 
-/* 좁은 데스크톱(900~1180px)에서 브랜드 로고를 약간 줄여 메뉴가 한 줄에 들어오도록 */
-@media (max-width: 1180px) and (min-width: 901px) {
-  .brand-img { height: 56px; }
-  .header-inner { gap: 16px; height: 80px; }
-  .main-nav a { padding: 8px 10px; font-size: 14px; }
-  .header-cta .btn { padding: 8px 14px; font-size: 14px; }
+/* 좁은 데스크톱(1025~1280px): 메뉴를 점진적으로 압축해 한 줄 유지 */
+@media (max-width: 1280px) and (min-width: 1025px) {
+  .brand-img { height: 50px; }
+  .header-inner { gap: 12px; height: 74px; }
+  .main-nav { gap: 0; }
+  .main-nav a { padding: 8px 8px; font-size: 13.5px; }
+  .header-cta .btn { padding: 8px 12px; font-size: 13.5px; }
 }
 
 /* Header CTA */
@@ -1541,7 +1544,7 @@ details.faq p {
   .tier-grid.cols-4 { grid-template-columns: repeat(3, 1fr); }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .main-nav { display: none; }
   .header-cta { display: none; }
   .menu-toggle { display: flex; }
