@@ -39,7 +39,8 @@
         {"text": "이용 안내", "href": "../../guide/index.html"},
         {"text": "회사 소개", "href": "../../about/index.html"}
       ],
-      "used": false
+      "used": true,
+      "published_at": "2026-05-13"
     },
     {
       "slug": "salary-types-daily-monthly-percentage",

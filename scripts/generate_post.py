@@ -316,6 +316,27 @@ def render_html(topic: dict, article: dict, slug: str, post_url: str) -> str:
         for i in range(1, 6)
     )
 
+    # 본문 상단 TL;DR 카드: 다섯 H2 제목에서 "N. " 접두사를 떼고 한 줄씩 보여줌
+    num_prefix = re.compile(r"^[0-9]+\.\s*")
+    lead_items = "\n".join(
+        '      <li>' + esc(num_prefix.sub("", article[f"h2_{i}"])) + '</li>'
+        for i in range(1, 6)
+    )
+    body_chars_for_lead = sum(len(article[f"p_{i}"]) for i in range(1, 6))
+    read_minutes = max(2, round(body_chars_for_lead / 500))
+    lead_html = f'''  <aside class="post-lead">
+    <span class="post-lead__title">한눈에 보기</span>
+    <h2>이 글에서 짚는 다섯 가지</h2>
+    <ul>
+{lead_items}
+    </ul>
+  </aside>
+  <div class="post-meta-strip">
+    <span class="chip chip--cat">{esc(category)}</span>
+    <span class="chip">읽는 데 약 {read_minutes}분</span>
+    <span class="chip">{date_korean}</span>
+  </div>'''
+
     related_items = "\n".join(
         f'      <li><a href="{esc(r["href"])}">{esc(r["text"])}</a></li>'
         for r in topic.get("related_links", [])
@@ -362,7 +383,7 @@ def render_html(topic: dict, article: dict, slug: str, post_url: str) -> str:
 <meta property="article:published_time" content="{iso}" />
 <link rel="stylesheet" href="../../css/style.css" />
 </head>
-<body>
+<body class="magazine-post-body">
 
 <div class="topbar"><div class="container">
   <a href="../../guide/index.html">이용 안내</a>
@@ -397,6 +418,7 @@ def render_html(topic: dict, article: dict, slug: str, post_url: str) -> str:
 </div></section>
 
 <div class="container">
+{lead_html}
   <article class="article">
 {sections_html}
   </article>
