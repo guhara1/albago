@@ -701,40 +701,16 @@ details.faq p {
   text-align: center;
   font-weight: 700;
   color: var(--text-primary);
-  transition: all 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   position: relative;
-  overflow: hidden;
 }
-.region-tile::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, var(--brand-primary) 0%, #3B82F6 100%);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  z-index: 0;
-}
-.region-tile > * { position: relative; z-index: 1; }
 .region-tile:hover {
+  background: linear-gradient(135deg, var(--brand-primary) 0%, #3B82F6 100%);
   border-color: var(--brand-primary);
   color: white;
   text-decoration: none;
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(30, 64, 175, 0.25);
-}
-.region-tile:hover::before { opacity: 1; }
-.region-tile:hover::after {
-  content: "→";
-  position: absolute;
-  right: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-  font-weight: 700;
-  z-index: 1;
 }
 .region-tile__count {
   display: block;
