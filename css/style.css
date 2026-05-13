@@ -153,6 +153,16 @@ img { max-width: 100%; display: block; }
 .brand-name { color: var(--text-primary); }
 .brand-name .accent { color: var(--brand-primary); }
 
+/* Logo image (replaces text logo in header) */
+.brand-img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+@media (max-width: 720px) {
+  .brand-img { height: 36px; }
+}
+
 /* Nav */
 .main-nav {
   display: flex;
@@ -779,6 +789,13 @@ details.faq p {
 }
 .footer-brand .brand-logo {
   background: linear-gradient(135deg, #3B82F6, #60A5FA);
+}
+/* Footer logo image (replaces text logo in footer) */
+.footer-logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+  margin-bottom: 8px;
 }
 .footer-grid p {
   color: #94A3B8;
