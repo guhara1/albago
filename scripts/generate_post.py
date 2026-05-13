@@ -356,12 +356,50 @@ def render_html(topic: dict, article: dict, slug: str, post_url: str) -> str:
     <span class="chip">{date_korean}</span>
   </div>'''
 
-    related_items = "\n".join(
-        f'      <li><a href="{esc(r["href"])}">{esc(r["text"])}</a></li>'
-        for r in topic.get("related_links", [])
-    )
     related_label = topic.get("related_label", "구직 가이드")
     category = topic.get("category", "매거진")
+
+    # 관련 링크 카드 그리드 마크업 — href 패턴으로 카테고리/아이콘 자동 매핑
+    def _classify(href: str) -> tuple[str, str, str]:
+        h = href.lower()
+        if "/jobs/" in h:
+            return ("구인공고", "💼", "")
+        if "/resumes/" in h:
+            return ("이력서", "📝", "amber")
+        if "/partners/" in h:
+            return ("업체", "🏢", "slate")
+        if "/partner-stores/" in h:
+            return ("제휴업소", "🤝", "slate")
+        if "/guide/swedish" in h: return ("시술 가이드", "🌿", "green")
+        if "/guide/aroma" in h:   return ("시술 가이드", "🌸", "green")
+        if "/guide/thai" in h:    return ("시술 가이드", "🌏", "green")
+        if "/guide/lomi" in h:    return ("시술 가이드", "🌺", "green")
+        if "/guide/spa" in h:     return ("시술 가이드", "💆", "green")
+        if "/guide/sports" in h:  return ("시술 가이드", "🏋", "green")
+        if "/guide/homecare" in h:return ("시술 가이드", "🏠", "green")
+        if "/guide/chinese" in h: return ("시술 가이드", "🍀", "green")
+        if "/guide/" in h:        return ("이용 안내", "📖", "")
+        if "/support/" in h:      return ("안전·고객지원", "🛡", "rose")
+        if "/about/" in h:        return ("회사 소개", "ℹ️", "slate")
+        if "/ads/" in h:          return ("상품 안내", "🎯", "amber")
+        if "/magazine/" in h:     return ("매거진", "📰", "")
+        return ("바로 가기", "🔗", "slate")
+
+    related_cards = "\n".join(
+        (
+            lambda c, i, tone: (
+                f'      <a href="{esc(r["href"])}" class="related-card">\n'
+                f'        <span class="related-card__icon {tone}" aria-hidden="true">{i}</span>\n'
+                f'        <span class="related-card__body">\n'
+                f'          <span class="related-card__cat">{esc(c)}</span>\n'
+                f'          <span class="related-card__title">{esc(r["text"])}</span>\n'
+                f'        </span>\n'
+                f'        <span class="related-card__arrow" aria-hidden="true">→</span>\n'
+                f'      </a>'
+            )
+        )(*_classify(r["href"]))
+        for r in topic.get("related_links", [])
+    )
 
     keywords = ["마사지 구인구직", "관리사 채용", "마사지알바고", category]
     if topic.get("region_hint"):
@@ -453,15 +491,15 @@ def render_html(topic: dict, article: dict, slug: str, post_url: str) -> str:
     <a href="../../support/index.html#safety">안전 가이드</a>를 참고해 거르세요. 4대보험·근로계약서 작성은 정상 매장에서 당연히 진행되는 절차입니다.
   </aside>
 
-  <section class="section" style="padding: 24px 0 60px;">
-    <div class="section-head">
-      <span class="eyebrow">함께 보면 좋은 글</span>
-      <h2>관련 정보</h2>
-      <p>{esc(related_label)}</p>
+  <section class="related-section" aria-label="관련 정보">
+    <div class="related-section__head">
+      <span class="related-section__eyebrow">함께 보면 좋은 곳</span>
+      <h2 class="related-section__title">사이트 둘러보기</h2>
+      <span class="related-section__sub">{esc(related_label)}</span>
     </div>
-    <ul class="article">
-{related_items}
-    </ul>
+    <div class="related-grid">
+{related_cards}
+    </div>
   </section>
 </div>
 
