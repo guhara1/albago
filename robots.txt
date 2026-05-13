@@ -1,4 +1,4 @@
-# robots.txt for massage-albago.kr
+# robots.txt for albago.pages.dev (임시 — 정식 도메인 구입 후 교체 예정)
 # 전국 마사지 구인구직 플랫폼
 
 User-agent: Googlebot
@@ -38,4 +38,4 @@ User-agent: *
 Allow: /
 Crawl-delay: 1
 
-Sitemap: https://massage-albago.kr/sitemap.xml
+Sitemap: https://albago.pages.dev/sitemap.xml
