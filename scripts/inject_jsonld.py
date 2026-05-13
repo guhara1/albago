@@ -10,7 +10,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DOMAIN = "https://albago.pages.dev"
+DOMAIN = "https://massagealbago.kr"
 
 # 공통 Organization 정의 - 모든 페이지가 참조
 ORG = {

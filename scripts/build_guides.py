@@ -14,7 +14,7 @@ from datetime import datetime, timezone, timedelta
 
 ROOT = Path(__file__).resolve().parent.parent
 GUIDE_DIR = ROOT / "guide"
-DOMAIN = "https://albago.pages.dev"
+DOMAIN = "https://massagealbago.kr"
 KST = timezone(timedelta(hours=9))
 TODAY_ISO = datetime.now(KST).strftime("%Y-%m-%dT%H:%M:%S+09:00")
 TODAY = datetime.now(KST).strftime("%Y-%m-%d")
@@ -799,8 +799,8 @@ def render(g: dict) -> str:
     <address class="footer-business" itemscope itemtype="https://schema.org/Organization">
       <meta itemprop="name" content="마사지알바고" />
       <meta itemprop="alternateName" content="MassageAlbaGo" />
-      <meta itemprop="url" content="https://albago.pages.dev/" />
-      <meta itemprop="logo" content="https://albago.pages.dev/images/logo/logo.png" />
+      <meta itemprop="url" content="https://massagealbago.kr/" />
+      <meta itemprop="logo" content="https://massagealbago.kr/images/logo/logo.png" />
       <dl class="footer-business__info">
         <div class="footer-business__row"><dt>상호</dt><dd itemprop="legalName">YH LAB</dd></div>
         <div class="footer-business__row"><dt>대표자</dt><dd>김수환</dd></div>

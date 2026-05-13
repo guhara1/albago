@@ -25,7 +25,7 @@ from pathlib import Path
 from anthropic import Anthropic
 
 ROOT = Path(__file__).resolve().parent.parent
-DOMAIN = "https://albago.pages.dev"
+DOMAIN = "https://massagealbago.kr"
 KST = timezone(timedelta(hours=9))
 
 POSTS_DIR = ROOT / "magazine" / "posts"
@@ -596,8 +596,8 @@ def render_html(topic: dict, article: dict, slug: str, post_url: str) -> str:
     <address class="footer-business" itemscope itemtype="https://schema.org/Organization">
       <meta itemprop="name" content="마사지알바고" />
       <meta itemprop="alternateName" content="MassageAlbaGo" />
-      <meta itemprop="url" content="https://albago.pages.dev/" />
-      <meta itemprop="logo" content="https://albago.pages.dev/images/logo/logo.png" />
+      <meta itemprop="url" content="https://massagealbago.kr/" />
+      <meta itemprop="logo" content="https://massagealbago.kr/images/logo/logo.png" />
       <dl class="footer-business__info">
         <div class="footer-business__row"><dt>상호</dt><dd itemprop="legalName">YH LAB</dd></div>
         <div class="footer-business__row"><dt>대표자</dt><dd>김수환</dd></div>
@@ -867,7 +867,7 @@ def update_sitemap(post_url: str) -> None:
     text = text.replace("</urlset>", entry + "</urlset>")
     # /magazine/ lastmod 업데이트
     text = re.sub(
-        r'(<loc>https://albago\.pages\.dev/magazine/</loc><lastmod>)[^<]+(</lastmod>)',
+        r'(<loc>https://massagealbago\.kr/magazine/</loc><lastmod>)[^<]+(</lastmod>)',
         rf'\g<1>{today}\g<2>',
         text,
     )
@@ -911,7 +911,7 @@ def update_rss() -> None:
 
 def ping_indexnow(post_url: str) -> None:
     payload = json.dumps({
-        "host": "albago.pages.dev",
+        "host": "massagealbago.kr",
         "key": INDEXNOW_KEY,
         "keyLocation": INDEXNOW_KEY_LOCATION,
         "urlList": [post_url, f"{DOMAIN}/magazine/", f"{DOMAIN}/magazine/rss.xml", f"{DOMAIN}/sitemap.xml"],
