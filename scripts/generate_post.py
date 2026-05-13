@@ -175,14 +175,17 @@ def call_claude(topic: dict, retry_hint: str = "") -> dict:
         max_tokens=4096,
         messages=[
             {"role": "user", "content": prompt},
-            {"role": "assistant", "content": "{"},
         ],
     )
-    raw = "{" + "".join(b.text for b in msg.content if b.type == "text")
-    raw = raw.strip()
+    raw = "".join(b.text for b in msg.content if b.type == "text").strip()
+    # ``` 또는 ```json 으로 감싸진 경우 제거
     raw = re.sub(r"^```(?:json)?\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
-    return json.loads(raw)
+    # 본문 안에서 첫 { 부터 마지막 } 까지 안전하게 추출
+    m = re.search(r"\{.*\}", raw, re.DOTALL)
+    if not m:
+        raise ValueError(f"응답에서 JSON 블록을 찾지 못했습니다: {raw[:300]}")
+    return json.loads(m.group(0))
 
 
 def validate(article: dict) -> str:
