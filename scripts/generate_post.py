@@ -362,47 +362,39 @@ def render_html(topic: dict, article: dict, slug: str, post_url: str) -> str:
     <span class="chip">{date_korean}</span>
   </div>'''
 
-    # 관련 링크 카드 그리드 마크업 — href 패턴으로 카테고리/아이콘 자동 매핑
-    def _classify(href: str) -> tuple[str, str, str]:
-        h = href.lower()
-        if "/jobs/" in h:
-            return ("구인공고", "💼", "")
-        if "/resumes/" in h:
-            return ("이력서", "📝", "amber")
-        if "/partners/" in h:
-            return ("업체", "🏢", "slate")
-        if "/partner-stores/" in h:
-            return ("제휴업소", "🤝", "slate")
-        if "/guide/swedish" in h: return ("시술 가이드", "🌿", "green")
-        if "/guide/aroma" in h:   return ("시술 가이드", "🌸", "green")
-        if "/guide/thai" in h:    return ("시술 가이드", "🌏", "green")
-        if "/guide/lomi" in h:    return ("시술 가이드", "🌺", "green")
-        if "/guide/spa" in h:     return ("시술 가이드", "💆", "green")
-        if "/guide/sports" in h:  return ("시술 가이드", "🏋", "green")
-        if "/guide/homecare" in h:return ("시술 가이드", "🏠", "green")
-        if "/guide/chinese" in h: return ("시술 가이드", "🍀", "green")
-        if "/guide/" in h:        return ("이용 안내", "📖", "")
-        if "/support/" in h:      return ("안전·고객지원", "🛡", "rose")
-        if "/about/" in h:        return ("회사 소개", "ℹ️", "slate")
-        if "/ads/" in h:          return ("상품 안내", "🎯", "amber")
-        if "/magazine/" in h:     return ("매거진", "📰", "")
-        return ("바로 가기", "🔗", "slate")
+    # 다음 글 미리보기 — 토픽 큐에서 used:false 첫번째 (현재 글 다음에 발행될 토픽)
+    try:
+        _queue = load_queue()
+        _upcoming = [t for t in _queue.get("topics", []) if not t.get("used")]
+        next_topic = _upcoming[0] if _upcoming else None
+    except Exception:
+        next_topic = None
+    if next_topic:
+        next_date = (datetime.now(KST) + timedelta(days=(7 - datetime.now(KST).weekday()) % 7 or 7)).strftime("%m월 %d일(월요일)")
+        next_html = (
+            f'<strong>{esc(next_date)} 09:00 KST 발행 예정</strong>'
+            f'<br><a href="../index.html">{esc(next_topic["title"])}</a>'
+        )
+    else:
+        next_html = '<strong>매주 월요일 오전 09:00 KST</strong><br><a href="../index.html">매거진 전체 보기 →</a>'
 
-    related_cards = "\n".join(
-        (
-            lambda c, i, tone: (
-                f'      <a href="{esc(r["href"])}" class="related-card">\n'
-                f'        <span class="related-card__icon {tone}" aria-hidden="true">{i}</span>\n'
-                f'        <span class="related-card__body">\n'
-                f'          <span class="related-card__cat">{esc(c)}</span>\n'
-                f'          <span class="related-card__title">{esc(r["text"])}</span>\n'
-                f'        </span>\n'
-                f'        <span class="related-card__arrow" aria-hidden="true">→</span>\n'
-                f'      </a>'
-            )
-        )(*_classify(r["href"]))
-        for r in topic.get("related_links", [])
-    )
+    # 슬림한 인라인 관련 링크 (텍스트만, SEO 내부 링크 용도) — 5개까지
+    _rl = topic.get("related_links", [])[:5]
+    if _rl:
+        _items = []
+        for i, r in enumerate(_rl):
+            if i > 0:
+                _items.append('<span class="sep">·</span>')
+            _items.append(f'<a href="{esc(r["href"])}">{esc(r["text"])}</a>')
+        related_inline_html = " ".join(_items)
+    else:
+        related_inline_html = (
+            '<a href="../../jobs/index.html">전체 구인공고</a> '
+            '<span class="sep">·</span> '
+            '<a href="../../resumes/index.html">이력서 등록</a> '
+            '<span class="sep">·</span> '
+            '<a href="../index.html">매거진</a>'
+        )
 
     keywords = ["마사지 구인구직", "관리사 채용", "마사지알바고", category]
     if topic.get("region_hint"):
@@ -494,16 +486,39 @@ def render_html(topic: dict, article: dict, slug: str, post_url: str) -> str:
     <a href="../../support/index.html#safety">안전 가이드</a>를 참고해 거르세요. 4대보험·근로계약서 작성은 정상 매장에서 당연히 진행되는 절차입니다.
   </aside>
 
-  <section class="related-section" aria-label="관련 정보">
-    <div class="related-section__head">
-      <span class="related-section__eyebrow">함께 보면 좋은 곳</span>
-      <h2 class="related-section__title">사이트 둘러보기</h2>
-      <span class="related-section__sub">{esc(related_label)}</span>
+  <aside class="post-cta-banner">
+    <div class="post-cta-banner__text">
+      <h2 class="post-cta-banner__title">검증된 채용 공고로 시작하세요</h2>
+      <p class="post-cta-banner__lead">마사지알바고는 사업자 인증을 마친 매장의 공고만 노출합니다. 본인 페이스로, 본인 조건에 맞는 자리부터.</p>
     </div>
-    <div class="related-grid">
-{related_cards}
+    <div class="post-cta-banner__actions">
+      <a href="../../resumes/index.html" class="btn btn-lg">이력서 등록</a>
+      <a href="../../jobs/index.html" class="btn btn-outline btn-lg">구인공고 보기</a>
     </div>
-  </section>
+  </aside>
+
+  <div class="post-meta-rows">
+    <div class="post-meta-card">
+      <span class="post-meta-card__eyebrow">📝 편집팀 노트</span>
+      <div class="post-meta-card__body">
+        이 글은 <strong>마사지알바고 편집팀</strong>이 작성했습니다.
+        마사지·스파·테라피 업계 현장 톤을 우선해 정리한 글이며,
+        구체 수치는 등록된 공고 표본 기반 추정치입니다.<br><br>
+        발행 {esc(date_korean)} · 카테고리 {esc(category)}
+      </div>
+    </div>
+    <div class="post-meta-card">
+      <span class="post-meta-card__eyebrow">🗓 다음 글 미리보기</span>
+      <div class="post-meta-card__body">
+        {next_html}
+      </div>
+    </div>
+  </div>
+
+  <div class="post-related-inline" aria-label="관련 페이지">
+    <span class="post-related-inline__label">관련 정보:</span>
+    {related_inline_html}
+  </div>
 </div>
 
 <footer class="site-footer">
