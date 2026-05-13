@@ -856,6 +856,39 @@ details.faq p {
   margin-left: 24px;
 }
 
+/* Social icons */
+.footer-social {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0;
+  display: flex;
+  gap: 8px;
+}
+.footer-social li { display: inline-block; }
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #CBD5E1;
+  transition: background 0.15s, color 0.15s, transform 0.15s;
+}
+.footer-social a:hover,
+.footer-social a:focus {
+  background: rgba(255, 255, 255, 0.16);
+  color: white;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
 /* Nav columns */
 .footer-nav__title {
   color: white;

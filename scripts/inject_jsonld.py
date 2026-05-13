@@ -33,6 +33,11 @@ ORG = {
     "email": "hello@massage-albago.kr",
     "founder": {"@type": "Person", "name": "김수환"},
     "areaServed": {"@type": "Country", "name": "대한민국"},
+    "sameAs": [
+        "https://www.linkedin.com/in/%EB%B0%B1%ED%98%B8-%EA%B0%95-a84273261/",
+        "https://medium.com/@88smartbro88",
+        "https://x.com/gugeulmake84173",
+    ],
 }
 
 WEBSITE = {
