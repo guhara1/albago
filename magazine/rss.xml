@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>마사지알바고 매거진</title>
-    <link>https://albago.pages.dev/magazine/</link>
-    <atom:link href="https://albago.pages.dev/magazine/rss.xml" rel="self" type="application/rss+xml"/>
+    <link>https://massagealbago.kr/magazine/</link>
+    <atom:link href="https://massagealbago.kr/magazine/rss.xml" rel="self" type="application/rss+xml"/>
     <description>마사지·스파·테라피 구인구직, 관리사 직업 정보, 업계 인사이트.</description>
     <language>ko-KR</language>
     <lastBuildDate>Thu, 14 May 2026 00:07:13 +0900</lastBuildDate>
     <generator>마사지알바고 Auto-Publisher</generator>
     <item>
       <title><![CDATA[관리사 면접, 진짜로 묻는 질문은 따로 있어요]]></title>
-      <link>https://albago.pages.dev/magazine/posts/interview-questions-massage-job.html</link>
-      <guid isPermaLink="true">https://albago.pages.dev/magazine/posts/interview-questions-massage-job.html</guid>
+      <link>https://massagealbago.kr/magazine/posts/interview-questions-massage-job.html</link>
+      <guid isPermaLink="true">https://massagealbago.kr/magazine/posts/interview-questions-massage-job.html</guid>
       <description><![CDATA[면접 자리에 앉으면 어떤 질문이 나오고, 어떻게 답해야 본인 톤으로 들리는지. 첫 5분 질문부터 본인이 역으로 물어야 할 세 가지까지, 현장 톤 그대로.]]></description>
       <pubDate>Thu, 14 May 2026 00:07:13 +0900</pubDate>
     </item>
     <item>
       <title><![CDATA[처음 마사지샵 면접 보러 가기 전에, 누가 좀 알려줬으면 했던 것들]]></title>
-      <link>https://albago.pages.dev/magazine/posts/first-job-massage-shop-honest-guide.html</link>
-      <guid isPermaLink="true">https://albago.pages.dev/magazine/posts/first-job-massage-shop-honest-guide.html</guid>
+      <link>https://massagealbago.kr/magazine/posts/first-job-massage-shop-honest-guide.html</link>
+      <guid isPermaLink="true">https://massagealbago.kr/magazine/posts/first-job-massage-shop-honest-guide.html</guid>
       <description><![CDATA[강남권 마사지샵 첫 면접을 앞둔 분들에게. 면접 전·입사 직후 현장에서 마주치는 현실적인 이야기들을 선배 입장에서 풀어봤어요.]]></description>
       <pubDate>Thu, 14 May 2026 00:07:13 +0900</pubDate>
     </item>
