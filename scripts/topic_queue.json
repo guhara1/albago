@@ -12,14 +12,33 @@
       "region_hint": "서울 강남구·송파구",
       "related_label": "구직 가이드",
       "related_links": [
-        {"text": "전체 구인공고 보기", "href": "../../jobs/index.html"},
-        {"text": "이력서 등록하기", "href": "../../resumes/index.html"},
-        {"text": "서울 지역 채용공고", "href": "../../jobs/seoul.html"},
-        {"text": "시술별 가이드", "href": "../../guide/index.html"},
-        {"text": "스웨디시 시술 가이드", "href": "../../guide/swedish.html"},
-        {"text": "안전 가이드", "href": "../../support/index.html#safety"}
+        {
+          "text": "전체 구인공고 보기",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 등록하기",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "서울 지역 채용공고",
+          "href": "../../jobs/seoul.html"
+        },
+        {
+          "text": "시술별 가이드",
+          "href": "../../guide/index.html"
+        },
+        {
+          "text": "스웨디시 시술 가이드",
+          "href": "../../guide/swedish.html"
+        },
+        {
+          "text": "안전 가이드",
+          "href": "../../support/index.html#safety"
+        }
       ],
-      "used": false
+      "used": true,
+      "published_at": "2026-05-14"
     },
     {
       "slug": "interview-questions-massage-job",
@@ -31,12 +50,30 @@
       "region_hint": "전국",
       "related_label": "구직 가이드",
       "related_links": [
-        {"text": "이력서 등록하기", "href": "../../resumes/index.html"},
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "스웨디시 가이드", "href": "../../guide/swedish.html"},
-        {"text": "아로마 가이드", "href": "../../guide/aroma.html"},
-        {"text": "이용 안내", "href": "../../guide/index.html"},
-        {"text": "회사 소개", "href": "../../about/index.html"}
+        {
+          "text": "이력서 등록하기",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "스웨디시 가이드",
+          "href": "../../guide/swedish.html"
+        },
+        {
+          "text": "아로마 가이드",
+          "href": "../../guide/aroma.html"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        }
       ],
       "used": true,
       "published_at": "2026-05-13"
@@ -51,12 +88,30 @@
       "region_hint": "수도권",
       "related_label": "근무조건 가이드",
       "related_links": [
-        {"text": "구인공고 전체", "href": "../../jobs/index.html"},
-        {"text": "경기 지역 채용", "href": "../../jobs/gyeonggi.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "타이 마사지 가이드", "href": "../../guide/thai.html"},
-        {"text": "홈케어 가이드", "href": "../../guide/homecare.html"},
-        {"text": "이용 안내", "href": "../../guide/index.html"}
+        {
+          "text": "구인공고 전체",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "경기 지역 채용",
+          "href": "../../jobs/gyeonggi.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "타이 마사지 가이드",
+          "href": "../../guide/thai.html"
+        },
+        {
+          "text": "홈케어 가이드",
+          "href": "../../guide/homecare.html"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        }
       ],
       "used": false
     },
@@ -70,12 +125,30 @@
       "region_hint": "서울 강남, 부산 서면",
       "related_label": "근무 환경",
       "related_links": [
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "부산 지역 채용", "href": "../../jobs/busan.html"},
-        {"text": "안전 가이드", "href": "../../support/index.html#safety"},
-        {"text": "스파 가이드", "href": "../../guide/spa.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "회사 소개", "href": "../../about/index.html"}
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "부산 지역 채용",
+          "href": "../../jobs/busan.html"
+        },
+        {
+          "text": "안전 가이드",
+          "href": "../../support/index.html#safety"
+        },
+        {
+          "text": "스파 가이드",
+          "href": "../../guide/spa.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        }
       ],
       "used": false
     },
@@ -89,12 +162,30 @@
       "region_hint": "전국",
       "related_label": "직업 정보",
       "related_links": [
-        {"text": "스파 가이드", "href": "../../guide/spa.html"},
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "안전 가이드", "href": "../../support/index.html#safety"},
-        {"text": "회사 소개", "href": "../../about/index.html"},
-        {"text": "고객지원", "href": "../../support/index.html"}
+        {
+          "text": "스파 가이드",
+          "href": "../../guide/spa.html"
+        },
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "안전 가이드",
+          "href": "../../support/index.html#safety"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        },
+        {
+          "text": "고객지원",
+          "href": "../../support/index.html"
+        }
       ],
       "used": false
     },
@@ -108,12 +199,30 @@
       "region_hint": "수도권",
       "related_label": "직업 정보",
       "related_links": [
-        {"text": "구인공고 전체", "href": "../../jobs/index.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "업체 가입 안내", "href": "../../partners/index.html"},
-        {"text": "회사 소개", "href": "../../about/index.html"},
-        {"text": "이용 안내", "href": "../../guide/index.html"},
-        {"text": "안전 가이드", "href": "../../support/index.html#safety"}
+        {
+          "text": "구인공고 전체",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "업체 가입 안내",
+          "href": "../../partners/index.html"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        },
+        {
+          "text": "안전 가이드",
+          "href": "../../support/index.html#safety"
+        }
       ],
       "used": false
     },
@@ -127,12 +236,30 @@
       "region_hint": "서울 송파, 강남",
       "related_label": "서비스직 팁",
       "related_links": [
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "스웨디시 가이드", "href": "../../guide/swedish.html"},
-        {"text": "아로마 가이드", "href": "../../guide/aroma.html"},
-        {"text": "이용 안내", "href": "../../guide/index.html"},
-        {"text": "안전 가이드", "href": "../../support/index.html#safety"}
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "스웨디시 가이드",
+          "href": "../../guide/swedish.html"
+        },
+        {
+          "text": "아로마 가이드",
+          "href": "../../guide/aroma.html"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        },
+        {
+          "text": "안전 가이드",
+          "href": "../../support/index.html#safety"
+        }
       ],
       "used": false
     },
@@ -146,12 +273,30 @@
       "region_hint": "전국",
       "related_label": "구직 정보",
       "related_links": [
-        {"text": "구인공고 전체", "href": "../../jobs/index.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "시술별 가이드", "href": "../../guide/index.html"},
-        {"text": "스웨디시 가이드", "href": "../../guide/swedish.html"},
-        {"text": "타이 가이드", "href": "../../guide/thai.html"},
-        {"text": "회사 소개", "href": "../../about/index.html"}
+        {
+          "text": "구인공고 전체",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "시술별 가이드",
+          "href": "../../guide/index.html"
+        },
+        {
+          "text": "스웨디시 가이드",
+          "href": "../../guide/swedish.html"
+        },
+        {
+          "text": "타이 가이드",
+          "href": "../../guide/thai.html"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        }
       ],
       "used": false
     },
@@ -165,12 +310,30 @@
       "region_hint": "서울 마포, 종로",
       "related_label": "직업 정보",
       "related_links": [
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "이용 안내", "href": "../../guide/index.html"},
-        {"text": "회사 소개", "href": "../../about/index.html"},
-        {"text": "고객지원", "href": "../../support/index.html"},
-        {"text": "안전 가이드", "href": "../../support/index.html#safety"}
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        },
+        {
+          "text": "고객지원",
+          "href": "../../support/index.html"
+        },
+        {
+          "text": "안전 가이드",
+          "href": "../../support/index.html#safety"
+        }
       ],
       "used": false
     },
@@ -184,12 +347,30 @@
       "region_hint": "수도권",
       "related_label": "근무 환경",
       "related_links": [
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "서울 채용공고", "href": "../../jobs/seoul.html"},
-        {"text": "경기 채용공고", "href": "../../jobs/gyeonggi.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "스파 가이드", "href": "../../guide/spa.html"},
-        {"text": "이용 안내", "href": "../../guide/index.html"}
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "서울 채용공고",
+          "href": "../../jobs/seoul.html"
+        },
+        {
+          "text": "경기 채용공고",
+          "href": "../../jobs/gyeonggi.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "스파 가이드",
+          "href": "../../guide/spa.html"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        }
       ],
       "used": false
     },
@@ -203,12 +384,30 @@
       "region_hint": "전국",
       "related_label": "구직 가이드",
       "related_links": [
-        {"text": "이력서 등록하기", "href": "../../resumes/index.html"},
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "서울 채용", "href": "../../jobs/seoul.html"},
-        {"text": "부산 채용", "href": "../../jobs/busan.html"},
-        {"text": "이용 안내", "href": "../../guide/index.html"},
-        {"text": "회사 소개", "href": "../../about/index.html"}
+        {
+          "text": "이력서 등록하기",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "서울 채용",
+          "href": "../../jobs/seoul.html"
+        },
+        {
+          "text": "부산 채용",
+          "href": "../../jobs/busan.html"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        }
       ],
       "used": false
     },
@@ -222,12 +421,30 @@
       "region_hint": "전국",
       "related_label": "직업 정보",
       "related_links": [
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "스파 가이드", "href": "../../guide/spa.html"},
-        {"text": "스포츠 마사지 가이드", "href": "../../guide/sports.html"},
-        {"text": "회사 소개", "href": "../../about/index.html"},
-        {"text": "안전 가이드", "href": "../../support/index.html#safety"}
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "스파 가이드",
+          "href": "../../guide/spa.html"
+        },
+        {
+          "text": "스포츠 마사지 가이드",
+          "href": "../../guide/sports.html"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        },
+        {
+          "text": "안전 가이드",
+          "href": "../../support/index.html#safety"
+        }
       ],
       "used": false
     },
@@ -241,12 +458,30 @@
       "region_hint": "서울 강남·송파",
       "related_label": "직업 정보",
       "related_links": [
-        {"text": "홈케어 가이드", "href": "../../guide/homecare.html"},
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "스웨디시 가이드", "href": "../../guide/swedish.html"},
-        {"text": "안전 가이드", "href": "../../support/index.html#safety"},
-        {"text": "회사 소개", "href": "../../about/index.html"}
+        {
+          "text": "홈케어 가이드",
+          "href": "../../guide/homecare.html"
+        },
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "스웨디시 가이드",
+          "href": "../../guide/swedish.html"
+        },
+        {
+          "text": "안전 가이드",
+          "href": "../../support/index.html#safety"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        }
       ],
       "used": false
     },
@@ -260,12 +495,30 @@
       "region_hint": "수도권",
       "related_label": "근무조건",
       "related_links": [
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "서울 채용", "href": "../../jobs/seoul.html"},
-        {"text": "이용 안내", "href": "../../guide/index.html"},
-        {"text": "안전 가이드", "href": "../../support/index.html#safety"},
-        {"text": "회사 소개", "href": "../../about/index.html"}
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "서울 채용",
+          "href": "../../jobs/seoul.html"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        },
+        {
+          "text": "안전 가이드",
+          "href": "../../support/index.html#safety"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        }
       ],
       "used": false
     },
@@ -279,12 +532,30 @@
       "region_hint": "전국",
       "related_label": "시술 가이드",
       "related_links": [
-        {"text": "스웨디시 가이드", "href": "../../guide/swedish.html"},
-        {"text": "타이 가이드", "href": "../../guide/thai.html"},
-        {"text": "아로마 가이드", "href": "../../guide/aroma.html"},
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "시술별 가이드", "href": "../../guide/index.html"}
+        {
+          "text": "스웨디시 가이드",
+          "href": "../../guide/swedish.html"
+        },
+        {
+          "text": "타이 가이드",
+          "href": "../../guide/thai.html"
+        },
+        {
+          "text": "아로마 가이드",
+          "href": "../../guide/aroma.html"
+        },
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "시술별 가이드",
+          "href": "../../guide/index.html"
+        }
       ],
       "used": false
     },
@@ -298,12 +569,30 @@
       "region_hint": "서울 강남",
       "related_label": "면접 가이드",
       "related_links": [
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "서울 채용", "href": "../../jobs/seoul.html"},
-        {"text": "이용 안내", "href": "../../guide/index.html"},
-        {"text": "회사 소개", "href": "../../about/index.html"},
-        {"text": "안전 가이드", "href": "../../support/index.html#safety"}
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "서울 채용",
+          "href": "../../jobs/seoul.html"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        },
+        {
+          "text": "안전 가이드",
+          "href": "../../support/index.html#safety"
+        }
       ],
       "used": false
     },
@@ -317,12 +606,30 @@
       "region_hint": "수도권",
       "related_label": "커리어",
       "related_links": [
-        {"text": "업체 가입 안내", "href": "../../partners/index.html"},
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "회사 소개", "href": "../../about/index.html"},
-        {"text": "이용 안내", "href": "../../guide/index.html"},
-        {"text": "스파 가이드", "href": "../../guide/spa.html"}
+        {
+          "text": "업체 가입 안내",
+          "href": "../../partners/index.html"
+        },
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        },
+        {
+          "text": "스파 가이드",
+          "href": "../../guide/spa.html"
+        }
       ],
       "used": false
     },
@@ -336,12 +643,30 @@
       "region_hint": "전국",
       "related_label": "건강 관리",
       "related_links": [
-        {"text": "스포츠 마사지 가이드", "href": "../../guide/sports.html"},
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "안전 가이드", "href": "../../support/index.html#safety"},
-        {"text": "이용 안내", "href": "../../guide/index.html"},
-        {"text": "회사 소개", "href": "../../about/index.html"}
+        {
+          "text": "스포츠 마사지 가이드",
+          "href": "../../guide/sports.html"
+        },
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "안전 가이드",
+          "href": "../../support/index.html#safety"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        }
       ],
       "used": false
     },
@@ -355,12 +680,30 @@
       "region_hint": "전국",
       "related_label": "안전 가이드",
       "related_links": [
-        {"text": "안전 가이드", "href": "../../support/index.html#safety"},
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "이용 안내", "href": "../../guide/index.html"},
-        {"text": "회사 소개", "href": "../../about/index.html"},
-        {"text": "고객지원", "href": "../../support/index.html"}
+        {
+          "text": "안전 가이드",
+          "href": "../../support/index.html#safety"
+        },
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        },
+        {
+          "text": "고객지원",
+          "href": "../../support/index.html"
+        }
       ],
       "used": false
     },
@@ -374,12 +717,30 @@
       "region_hint": "서울·부산·제주",
       "related_label": "지역별 구직",
       "related_links": [
-        {"text": "서울 채용", "href": "../../jobs/seoul.html"},
-        {"text": "부산 채용", "href": "../../jobs/busan.html"},
-        {"text": "제주 채용", "href": "../../jobs/jeju.html"},
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "이용 안내", "href": "../../guide/index.html"}
+        {
+          "text": "서울 채용",
+          "href": "../../jobs/seoul.html"
+        },
+        {
+          "text": "부산 채용",
+          "href": "../../jobs/busan.html"
+        },
+        {
+          "text": "제주 채용",
+          "href": "../../jobs/jeju.html"
+        },
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        }
       ],
       "used": false
     },
@@ -393,12 +754,30 @@
       "region_hint": "서울 마포",
       "related_label": "급여 가이드",
       "related_links": [
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "서울 채용", "href": "../../jobs/seoul.html"},
-        {"text": "회사 소개", "href": "../../about/index.html"},
-        {"text": "이용 안내", "href": "../../guide/index.html"},
-        {"text": "안전 가이드", "href": "../../support/index.html#safety"}
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "서울 채용",
+          "href": "../../jobs/seoul.html"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        },
+        {
+          "text": "안전 가이드",
+          "href": "../../support/index.html#safety"
+        }
       ],
       "used": false
     },
@@ -412,12 +791,30 @@
       "region_hint": "서울 송파",
       "related_label": "서비스직 팁",
       "related_links": [
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "이용 안내", "href": "../../guide/index.html"},
-        {"text": "회사 소개", "href": "../../about/index.html"},
-        {"text": "안전 가이드", "href": "../../support/index.html#safety"},
-        {"text": "고객지원", "href": "../../support/index.html"}
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        },
+        {
+          "text": "안전 가이드",
+          "href": "../../support/index.html#safety"
+        },
+        {
+          "text": "고객지원",
+          "href": "../../support/index.html"
+        }
       ],
       "used": false
     },
@@ -431,12 +828,30 @@
       "region_hint": "수도권",
       "related_label": "업체 운영",
       "related_links": [
-        {"text": "업체 가입 안내", "href": "../../partners/index.html"},
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "이력서 열람 안내", "href": "../../resumes/index.html"},
-        {"text": "이용 안내", "href": "../../guide/index.html"},
-        {"text": "회사 소개", "href": "../../about/index.html"},
-        {"text": "고객지원", "href": "../../support/index.html"}
+        {
+          "text": "업체 가입 안내",
+          "href": "../../partners/index.html"
+        },
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 열람 안내",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        },
+        {
+          "text": "고객지원",
+          "href": "../../support/index.html"
+        }
       ],
       "used": false
     },
@@ -450,12 +865,30 @@
       "region_hint": "전국",
       "related_label": "건강 관리",
       "related_links": [
-        {"text": "스포츠 마사지 가이드", "href": "../../guide/sports.html"},
-        {"text": "스파 가이드", "href": "../../guide/spa.html"},
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "회사 소개", "href": "../../about/index.html"},
-        {"text": "이용 안내", "href": "../../guide/index.html"}
+        {
+          "text": "스포츠 마사지 가이드",
+          "href": "../../guide/sports.html"
+        },
+        {
+          "text": "스파 가이드",
+          "href": "../../guide/spa.html"
+        },
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        }
       ],
       "used": false
     },
@@ -469,12 +902,30 @@
       "region_hint": "수도권",
       "related_label": "구직 타이밍",
       "related_links": [
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "서울 채용", "href": "../../jobs/seoul.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "이용 안내", "href": "../../guide/index.html"},
-        {"text": "회사 소개", "href": "../../about/index.html"},
-        {"text": "스파 가이드", "href": "../../guide/spa.html"}
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "서울 채용",
+          "href": "../../jobs/seoul.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        },
+        {
+          "text": "스파 가이드",
+          "href": "../../guide/spa.html"
+        }
       ],
       "used": false
     },
@@ -488,12 +939,30 @@
       "region_hint": "전국",
       "related_label": "직업 정보",
       "related_links": [
-        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
-        {"text": "이력서 등록", "href": "../../resumes/index.html"},
-        {"text": "업체 가입 안내", "href": "../../partners/index.html"},
-        {"text": "이용 안내", "href": "../../guide/index.html"},
-        {"text": "회사 소개", "href": "../../about/index.html"},
-        {"text": "고객지원", "href": "../../support/index.html"}
+        {
+          "text": "전체 구인공고",
+          "href": "../../jobs/index.html"
+        },
+        {
+          "text": "이력서 등록",
+          "href": "../../resumes/index.html"
+        },
+        {
+          "text": "업체 가입 안내",
+          "href": "../../partners/index.html"
+        },
+        {
+          "text": "이용 안내",
+          "href": "../../guide/index.html"
+        },
+        {
+          "text": "회사 소개",
+          "href": "../../about/index.html"
+        },
+        {
+          "text": "고객지원",
+          "href": "../../support/index.html"
+        }
       ],
       "used": false
     }
