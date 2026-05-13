@@ -400,13 +400,29 @@ img { max-width: 100%; display: block; }
   transition: all 0.2s ease;
   display: block;
   color: inherit;
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--brand-primary), #60A5FA);
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 .card:hover {
   text-decoration: none;
   border-color: var(--brand-primary);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(30, 64, 175, 0.10);
+  transform: translateY(-3px);
 }
+.card:hover::before { opacity: 1; }
+.card h3 { transition: color 0.2s ease; }
+.card:hover h3 { color: var(--brand-primary); }
 .card h3 {
   margin: 16px 0 8px;
   color: var(--text-primary);
@@ -679,20 +695,46 @@ details.faq p {
 .region-tile {
   display: block;
   padding: 18px 20px;
-  background: white;
+  background: linear-gradient(135deg, #ffffff 0%, #F8FAFC 100%);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-primary);
-  transition: all 0.15s ease;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
 }
+.region-tile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--brand-primary) 0%, #3B82F6 100%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 0;
+}
+.region-tile > * { position: relative; z-index: 1; }
 .region-tile:hover {
   border-color: var(--brand-primary);
-  background: var(--brand-primary);
   color: white;
   text-decoration: none;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(30, 64, 175, 0.25);
+}
+.region-tile:hover::before { opacity: 1; }
+.region-tile:hover::after {
+  content: "→";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-weight: 700;
+  z-index: 1;
 }
 .region-tile__count {
   display: block;
