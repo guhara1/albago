@@ -153,6 +153,16 @@ img { max-width: 100%; display: block; }
 .brand-name { color: var(--text-primary); }
 .brand-name .accent { color: var(--brand-primary); }
 
+/* Logo image (replaces text logo in header) */
+.brand-img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+@media (max-width: 720px) {
+  .brand-img { height: 36px; }
+}
+
 /* Nav */
 .main-nav {
   display: flex;
@@ -544,29 +554,36 @@ img { max-width: 100%; display: block; }
 
 /* ===== Article content ===== */
 .article {
-  padding: 60px 0;
+  padding: 48px 0 60px;
+  max-width: 820px;       /* 가독성 위해 본문 폭 제한 (이전: 1200px) */
+  margin: 0 auto;
 }
+.article > section { margin-bottom: 36px; }
 .article h2 {
-  margin: 48px 0 16px;
-  padding-bottom: 10px;
+  margin: 0 0 16px;
+  padding-bottom: 12px;
   border-bottom: 2px solid var(--bg-muted);
+  font-size: 22px;
+  letter-spacing: -0.3px;
 }
 .article h3 {
-  margin: 32px 0 12px;
+  margin: 24px 0 10px;
   color: var(--text-primary);
+  font-size: 17px;
 }
 .article p {
   font-size: 16px;
   color: var(--text-secondary);
-  line-height: 1.75;
+  line-height: 1.8;
+  margin: 0 0 14px;
 }
 .article ul, .article ol {
   padding-left: 24px;
   color: var(--text-secondary);
 }
 .article ul li, .article ol li {
-  margin-bottom: 8px;
-  line-height: 1.7;
+  margin-bottom: 10px;
+  line-height: 1.75;
 }
 .article ul.check-list {
   list-style: none;
@@ -575,7 +592,7 @@ img { max-width: 100%; display: block; }
 .article ul.check-list li {
   position: relative;
   padding-left: 32px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 .article ul.check-list li::before {
   content: "✓";
@@ -779,6 +796,13 @@ details.faq p {
 }
 .footer-brand .brand-logo {
   background: linear-gradient(135deg, #3B82F6, #60A5FA);
+}
+/* Footer logo image (replaces text logo in footer) */
+.footer-logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+  margin-bottom: 8px;
 }
 .footer-grid p {
   color: #94A3B8;
