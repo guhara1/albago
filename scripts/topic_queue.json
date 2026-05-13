@@ -1,0 +1,501 @@
+{
+  "version": 1,
+  "comment": "마사지알바고 매거진 토픽 큐. 메인=구인구직, 확장=직업 정보·채용·근무조건·면접·급여·고객 응대·서비스직 팁, 보조=야간근무·감정노동·프리랜서 수입관리·초보 사회생활. 주 1회 1편.",
+  "topics": [
+    {
+      "slug": "first-job-massage-shop-honest-guide",
+      "post_type": "experience",
+      "title": "마사지샵 처음 입사할 때 아무도 알려주지 않는 것들",
+      "category": "구인구직",
+      "search_intent": "관리사로 처음 마사지샵에 취업하려는 사람이 면접 전·입사 직후 현실적으로 알아야 할 정보를 찾음",
+      "scenario": "20대 중반 여성, 첫 관리사 도전, 강남·역삼 권역 매장 면접을 앞두고 검색",
+      "region_hint": "서울 강남구·송파구",
+      "related_label": "구직 가이드",
+      "related_links": [
+        {"text": "전체 구인공고 보기", "href": "../../jobs/index.html"},
+        {"text": "이력서 등록하기", "href": "../../resumes/index.html"},
+        {"text": "서울 지역 채용공고", "href": "../../jobs/seoul.html"},
+        {"text": "시술별 가이드", "href": "../../guide/index.html"},
+        {"text": "스웨디시 시술 가이드", "href": "../../guide/swedish.html"},
+        {"text": "안전 가이드", "href": "../../support/index.html#safety"}
+      ],
+      "used": true,
+      "published_at": "2026-05-13"
+    },
+    {
+      "slug": "interview-questions-massage-job",
+      "post_type": "guide",
+      "title": "관리사 면접에서 실제로 물어보는 질문 모음",
+      "category": "면접",
+      "search_intent": "마사지샵 면접에서 어떤 질문이 나오는지, 어떻게 답해야 자연스럽게 들리는지 알고 싶음",
+      "scenario": "지방에서 서울로 올라와 첫 면접 보는 20대 후반, 면접 전날 카페에서 검색",
+      "region_hint": "전국",
+      "related_label": "구직 가이드",
+      "related_links": [
+        {"text": "이력서 등록하기", "href": "../../resumes/index.html"},
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "스웨디시 가이드", "href": "../../guide/swedish.html"},
+        {"text": "아로마 가이드", "href": "../../guide/aroma.html"},
+        {"text": "이용 안내", "href": "../../guide/index.html"},
+        {"text": "회사 소개", "href": "../../about/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "salary-types-daily-monthly-percentage",
+      "post_type": "guide",
+      "title": "일급제, 월급제, 건당제 — 마사지 업계 급여 형태 비교",
+      "category": "급여",
+      "search_intent": "마사지샵에서 일하면 어떤 급여 구조가 있는지, 어떤 게 본인에게 유리한지 알고 싶음",
+      "scenario": "프리랜서 경험이 있는 30대 초반 관리사가 안정적 월급제로 옮길지 고민",
+      "region_hint": "수도권",
+      "related_label": "근무조건 가이드",
+      "related_links": [
+        {"text": "구인공고 전체", "href": "../../jobs/index.html"},
+        {"text": "경기 지역 채용", "href": "../../jobs/gyeonggi.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "타이 마사지 가이드", "href": "../../guide/thai.html"},
+        {"text": "홈케어 가이드", "href": "../../guide/homecare.html"},
+        {"text": "이용 안내", "href": "../../guide/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "night-shift-massage-real-life",
+      "post_type": "experience",
+      "title": "야간근무 마사지샵, 진짜 어떤 느낌인지 솔직히 적음",
+      "category": "야간근무",
+      "search_intent": "야간 근무 마사지샵의 실제 분위기, 체력 관리, 안전 이슈를 알고 싶음",
+      "scenario": "주간만 해봤던 관리사가 야간 채용 공고를 보고 결정 못 하고 망설임",
+      "region_hint": "서울 강남, 부산 서면",
+      "related_label": "근무 환경",
+      "related_links": [
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "부산 지역 채용", "href": "../../jobs/busan.html"},
+        {"text": "안전 가이드", "href": "../../support/index.html#safety"},
+        {"text": "스파 가이드", "href": "../../guide/spa.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "회사 소개", "href": "../../about/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "emotional-labor-massage-therapist",
+      "post_type": "experience",
+      "title": "감정노동, 관리사가 가장 늦게 알아채는 직업병",
+      "category": "감정노동",
+      "search_intent": "서비스직·관리사로 일하면서 느끼는 감정 소모와 그 관리법을 찾음",
+      "scenario": "3년차 관리사가 출근하기 싫은 날이 늘어 자기 직업을 의심하기 시작",
+      "region_hint": "전국",
+      "related_label": "직업 정보",
+      "related_links": [
+        {"text": "스파 가이드", "href": "../../guide/spa.html"},
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "안전 가이드", "href": "../../support/index.html#safety"},
+        {"text": "회사 소개", "href": "../../about/index.html"},
+        {"text": "고객지원", "href": "../../support/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "freelance-therapist-income-management",
+      "post_type": "guide",
+      "title": "프리랜서 테라피스트, 수입 관리 못하면 1년 뒤가 무서워요",
+      "category": "프리랜서 수입관리",
+      "search_intent": "프리랜서로 일하는 테라피스트가 수입 관리, 세금, 건보·국민연금을 어떻게 처리해야 하는지 알고 싶음",
+      "scenario": "1년차 프리랜서, 5월 종합소득세 시즌에 처음으로 신고를 직접 해야 하는 상황",
+      "region_hint": "수도권",
+      "related_label": "직업 정보",
+      "related_links": [
+        {"text": "구인공고 전체", "href": "../../jobs/index.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "업체 가입 안내", "href": "../../partners/index.html"},
+        {"text": "회사 소개", "href": "../../about/index.html"},
+        {"text": "이용 안내", "href": "../../guide/index.html"},
+        {"text": "안전 가이드", "href": "../../support/index.html#safety"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "customer-service-difficult-cases",
+      "post_type": "experience",
+      "title": "예민한 고객, 진상 고객 — 현장에서 쓰는 작은 응대 기술",
+      "category": "고객 응대",
+      "search_intent": "마사지샵에서 까다로운 고객을 만났을 때 어떻게 응대해야 분위기를 망치지 않는지 알고 싶음",
+      "scenario": "2년차 관리사, 매장에 단골 컴플레인 고객이 한 명 있어 매번 긴장하는 상황",
+      "region_hint": "서울 송파, 강남",
+      "related_label": "서비스직 팁",
+      "related_links": [
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "스웨디시 가이드", "href": "../../guide/swedish.html"},
+        {"text": "아로마 가이드", "href": "../../guide/aroma.html"},
+        {"text": "이용 안내", "href": "../../guide/index.html"},
+        {"text": "안전 가이드", "href": "../../support/index.html#safety"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "license-vs-no-license-massage",
+      "post_type": "guide",
+      "title": "관리사 자격증, 진짜 채용에 필요한 건가요",
+      "category": "자격증",
+      "search_intent": "관리사로 일하려면 어떤 자격증이 필요한지, 무자격이어도 가능한지 알고 싶음",
+      "scenario": "직업 전환을 고민하는 30대 초반, 학원비 부담 때문에 자격증 필수 여부 확인 중",
+      "region_hint": "전국",
+      "related_label": "구직 정보",
+      "related_links": [
+        {"text": "구인공고 전체", "href": "../../jobs/index.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "시술별 가이드", "href": "../../guide/index.html"},
+        {"text": "스웨디시 가이드", "href": "../../guide/swedish.html"},
+        {"text": "타이 가이드", "href": "../../guide/thai.html"},
+        {"text": "회사 소개", "href": "../../about/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "rookie-social-life-service-job",
+      "post_type": "experience",
+      "title": "서비스직 첫 1년, 사회생활이 제일 어렵더라고요",
+      "category": "초보 사회생활",
+      "search_intent": "서비스직에 처음 들어와 동료·매니저·고객 사이에서 어떻게 처신해야 할지 헷갈리는 신입을 위한 글",
+      "scenario": "20대 초반, 첫 마사지샵 입사 후 첫 한 달, 점심시간 분위기조차 어색해 검색",
+      "region_hint": "서울 마포, 종로",
+      "related_label": "직업 정보",
+      "related_links": [
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "이용 안내", "href": "../../guide/index.html"},
+        {"text": "회사 소개", "href": "../../about/index.html"},
+        {"text": "고객지원", "href": "../../support/index.html"},
+        {"text": "안전 가이드", "href": "../../support/index.html#safety"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "small-shop-vs-big-spa-which-better",
+      "post_type": "guide",
+      "title": "1인샵 vs 중대형 스파, 어디서 일해야 본인이 안 망가질까",
+      "category": "근무조건",
+      "search_intent": "1인샵과 중대형 스파의 실제 근무 환경 차이를 비교해 본인에게 맞는 곳을 찾고 싶음",
+      "scenario": "1인샵에서 2년 일한 관리사가 큰 매장으로 옮길지 결정 못 하고 검색",
+      "region_hint": "수도권",
+      "related_label": "근무 환경",
+      "related_links": [
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "서울 채용공고", "href": "../../jobs/seoul.html"},
+        {"text": "경기 채용공고", "href": "../../jobs/gyeonggi.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "스파 가이드", "href": "../../guide/spa.html"},
+        {"text": "이용 안내", "href": "../../guide/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "resume-writing-massage-job-tips",
+      "post_type": "guide",
+      "title": "관리사 이력서, 작은 차이가 면접 콜을 가른다",
+      "category": "구인구직",
+      "search_intent": "마사지·테라피 업종 이력서 작성 시 사진·경력·자격증을 어떻게 정리해야 하는지 알고 싶음",
+      "scenario": "경력 1년 관리사가 더 좋은 매장으로 이직 준비 중, 이력서 첫 줄부터 막혀 검색",
+      "region_hint": "전국",
+      "related_label": "구직 가이드",
+      "related_links": [
+        {"text": "이력서 등록하기", "href": "../../resumes/index.html"},
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "서울 채용", "href": "../../jobs/seoul.html"},
+        {"text": "부산 채용", "href": "../../jobs/busan.html"},
+        {"text": "이용 안내", "href": "../../guide/index.html"},
+        {"text": "회사 소개", "href": "../../about/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "burnout-after-three-years-massage",
+      "post_type": "experience",
+      "title": "3년차 번아웃, 그만둘까 옮길까 사이에서",
+      "category": "감정노동",
+      "search_intent": "3년차쯤 찾아오는 번아웃의 정체와, 그 시점에 이직과 휴식 중 어느 쪽이 맞는지 판단하고 싶음",
+      "scenario": "3년차 관리사, 손목 통증과 의욕 상실이 겹치며 진로를 진지하게 다시 생각",
+      "region_hint": "전국",
+      "related_label": "직업 정보",
+      "related_links": [
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "스파 가이드", "href": "../../guide/spa.html"},
+        {"text": "스포츠 마사지 가이드", "href": "../../guide/sports.html"},
+        {"text": "회사 소개", "href": "../../about/index.html"},
+        {"text": "안전 가이드", "href": "../../support/index.html#safety"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "homecare-therapist-day-in-life",
+      "post_type": "experience",
+      "title": "홈케어 테라피스트의 하루, 출장이 직장인 셈",
+      "category": "직업 정보",
+      "search_intent": "방문형 홈케어 테라피스트로 일하는 게 매장과 어떻게 다른지 하루 일과 중심으로 알고 싶음",
+      "scenario": "매장 근무 2년차 관리사가 홈케어 채용 공고를 보고 전환 가능성을 가늠",
+      "region_hint": "서울 강남·송파",
+      "related_label": "직업 정보",
+      "related_links": [
+        {"text": "홈케어 가이드", "href": "../../guide/homecare.html"},
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "스웨디시 가이드", "href": "../../guide/swedish.html"},
+        {"text": "안전 가이드", "href": "../../support/index.html#safety"},
+        {"text": "회사 소개", "href": "../../about/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "night-pay-realistic-numbers",
+      "post_type": "guide",
+      "title": "야간 수당, 실제 통장에 찍히는 액수는 얼마일까",
+      "category": "급여",
+      "search_intent": "야간 근무 관리사의 실수령 급여 구조, 세금·4대보험 공제 후 금액을 현실적으로 알고 싶음",
+      "scenario": "야간 근무를 시작한 신입이 첫 월급명세서를 받고 헷갈려 검색",
+      "region_hint": "수도권",
+      "related_label": "근무조건",
+      "related_links": [
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "서울 채용", "href": "../../jobs/seoul.html"},
+        {"text": "이용 안내", "href": "../../guide/index.html"},
+        {"text": "안전 가이드", "href": "../../support/index.html#safety"},
+        {"text": "회사 소개", "href": "../../about/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "swedish-vs-thai-which-train-first",
+      "post_type": "guide",
+      "title": "스웨디시 먼저 배울까, 타이부터 배울까 — 신입의 작은 갈림길",
+      "category": "직업 정보",
+      "search_intent": "관리사 입문 단계에서 스웨디시와 타이 중 어떤 시술을 먼저 배우는 게 취업에 유리한지 알고 싶음",
+      "scenario": "관리사 학원 등록 직전인 20대 후반, 코스 선택 때문에 일주일째 망설임",
+      "region_hint": "전국",
+      "related_label": "시술 가이드",
+      "related_links": [
+        {"text": "스웨디시 가이드", "href": "../../guide/swedish.html"},
+        {"text": "타이 가이드", "href": "../../guide/thai.html"},
+        {"text": "아로마 가이드", "href": "../../guide/aroma.html"},
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "시술별 가이드", "href": "../../guide/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "interview-day-what-to-wear-bring",
+      "post_type": "guide",
+      "title": "관리사 면접날, 옷차림과 가방 안의 작은 것들",
+      "category": "면접",
+      "search_intent": "관리사 면접 당일 복장, 메이크업, 챙겨야 할 서류를 구체적으로 알고 싶음",
+      "scenario": "면접 전날 밤 11시, 옷장 앞에서 막막한 신입 지원자",
+      "region_hint": "서울 강남",
+      "related_label": "면접 가이드",
+      "related_links": [
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "서울 채용", "href": "../../jobs/seoul.html"},
+        {"text": "이용 안내", "href": "../../guide/index.html"},
+        {"text": "회사 소개", "href": "../../about/index.html"},
+        {"text": "안전 가이드", "href": "../../support/index.html#safety"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "manager-track-from-therapist",
+      "post_type": "guide",
+      "title": "관리사에서 실장으로, 진짜 가능한지 솔직하게",
+      "category": "직업 정보",
+      "search_intent": "현장 관리사에서 매장 실장·운영자로 이동하는 경로와 필요한 역량을 알고 싶음",
+      "scenario": "4년차 관리사가 매장 운영 보조 제안을 받고 본격적인 커리어 전환을 고민",
+      "region_hint": "수도권",
+      "related_label": "커리어",
+      "related_links": [
+        {"text": "업체 가입 안내", "href": "../../partners/index.html"},
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "회사 소개", "href": "../../about/index.html"},
+        {"text": "이용 안내", "href": "../../guide/index.html"},
+        {"text": "스파 가이드", "href": "../../guide/spa.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "wrist-back-pain-self-care",
+      "post_type": "experience",
+      "title": "손목·허리, 관리사가 가장 빨리 갈리는 두 곳",
+      "category": "직업 정보",
+      "search_intent": "관리사의 직업적 통증 패턴(손목·허리·어깨)과 자가 관리법을 알고 싶음",
+      "scenario": "2년차 관리사, 손목 저림이 일상이 되며 처음으로 정형외과 방문을 고민",
+      "region_hint": "전국",
+      "related_label": "건강 관리",
+      "related_links": [
+        {"text": "스포츠 마사지 가이드", "href": "../../guide/sports.html"},
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "안전 가이드", "href": "../../support/index.html#safety"},
+        {"text": "이용 안내", "href": "../../guide/index.html"},
+        {"text": "회사 소개", "href": "../../about/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "fake-job-postings-how-to-spot",
+      "post_type": "guide",
+      "title": "이상한 채용 공고, 클릭 한 번에 거르는 법",
+      "category": "안전",
+      "search_intent": "허위·과장 또는 의심스러운 마사지샵 채용 공고를 거르는 기준과 신호를 알고 싶음",
+      "scenario": "구직 사이트를 돌아다니다 같은 매장이 다른 이름으로 올라온 걸 본 사용자",
+      "region_hint": "전국",
+      "related_label": "안전 가이드",
+      "related_links": [
+        {"text": "안전 가이드", "href": "../../support/index.html#safety"},
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "이용 안내", "href": "../../guide/index.html"},
+        {"text": "회사 소개", "href": "../../about/index.html"},
+        {"text": "고객지원", "href": "../../support/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "regional-market-seoul-busan-jeju",
+      "post_type": "experience",
+      "title": "서울·부산·제주, 같은 직업인데 다른 분위기",
+      "category": "구인구직",
+      "search_intent": "지역에 따라 관리사 채용 시장과 근무 분위기가 어떻게 다른지 비교하고 싶음",
+      "scenario": "서울에서 일하다 가족 사정으로 부산 또는 제주 이직을 고려하는 5년차",
+      "region_hint": "서울·부산·제주",
+      "related_label": "지역별 구직",
+      "related_links": [
+        {"text": "서울 채용", "href": "../../jobs/seoul.html"},
+        {"text": "부산 채용", "href": "../../jobs/busan.html"},
+        {"text": "제주 채용", "href": "../../jobs/jeju.html"},
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "이용 안내", "href": "../../guide/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "first-paycheck-mental-math",
+      "post_type": "experience",
+      "title": "첫 월급 받고 한참을 들여다봤습니다",
+      "category": "급여",
+      "search_intent": "관리사 첫 월급 명세서를 어떻게 해석해야 하는지, 공제 항목과 실수령액 차이를 알고 싶음",
+      "scenario": "20대 초반 신입 관리사가 첫 월급 명세서를 받고 친구와 한참 들여다보는 장면",
+      "region_hint": "서울 마포",
+      "related_label": "급여 가이드",
+      "related_links": [
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "서울 채용", "href": "../../jobs/seoul.html"},
+        {"text": "회사 소개", "href": "../../about/index.html"},
+        {"text": "이용 안내", "href": "../../guide/index.html"},
+        {"text": "안전 가이드", "href": "../../support/index.html#safety"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "co-worker-relationship-massage",
+      "post_type": "experience",
+      "title": "동료 관리사와 사이가 어색해질 때",
+      "category": "초보 사회생활",
+      "search_intent": "마사지샵 동료 관리사 사이의 갈등·예약 배분·휴게실 분위기를 어떻게 다뤄야 하는지 알고 싶음",
+      "scenario": "신입 관리사가 선배의 미묘한 예약 가로채기에 처음으로 마음 상한 날",
+      "region_hint": "서울 송파",
+      "related_label": "서비스직 팁",
+      "related_links": [
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "이용 안내", "href": "../../guide/index.html"},
+        {"text": "회사 소개", "href": "../../about/index.html"},
+        {"text": "안전 가이드", "href": "../../support/index.html#safety"},
+        {"text": "고객지원", "href": "../../support/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "shop-owner-hires-good-manager",
+      "post_type": "guide",
+      "title": "사장이 오래 같이 갈 관리사를 알아보는 작은 신호들",
+      "category": "마사지샵 채용",
+      "search_intent": "마사지샵 운영자 입장에서 오래 함께할 관리사를 알아보는 면접·시범 단계 신호를 알고 싶음",
+      "scenario": "10년차 1인샵 사장이 첫 직원 채용을 앞두고 면접을 어떻게 봐야 할지 검색",
+      "region_hint": "수도권",
+      "related_label": "업체 운영",
+      "related_links": [
+        {"text": "업체 가입 안내", "href": "../../partners/index.html"},
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "이력서 열람 안내", "href": "../../resumes/index.html"},
+        {"text": "이용 안내", "href": "../../guide/index.html"},
+        {"text": "회사 소개", "href": "../../about/index.html"},
+        {"text": "고객지원", "href": "../../support/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "off-day-recovery-massage-therapist",
+      "post_type": "experience",
+      "title": "쉬는 날도 몸이 안 풀려요, 관리사의 휴식 루틴",
+      "category": "직업 정보",
+      "search_intent": "관리사의 비번 날 회복법, 본인이 본인 몸을 풀어주는 작은 루틴을 알고 싶음",
+      "scenario": "주 6일 근무 관리사가 쉬는 날도 피곤해서 결국 또 정자세로 누워 있는 풍경",
+      "region_hint": "전국",
+      "related_label": "건강 관리",
+      "related_links": [
+        {"text": "스포츠 마사지 가이드", "href": "../../guide/sports.html"},
+        {"text": "스파 가이드", "href": "../../guide/spa.html"},
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "회사 소개", "href": "../../about/index.html"},
+        {"text": "이용 안내", "href": "../../guide/index.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "winter-season-recruitment-massage",
+      "post_type": "guide",
+      "title": "겨울 시즌 채용, 왜 가을부터 움직여야 할까",
+      "category": "구인구직",
+      "search_intent": "마사지샵 채용 성수기·비수기 흐름과 지원 타이밍을 알고 싶음",
+      "scenario": "여름에 그만둔 관리사가 다시 일을 시작할 시점을 가늠하며 검색",
+      "region_hint": "수도권",
+      "related_label": "구직 타이밍",
+      "related_links": [
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "서울 채용", "href": "../../jobs/seoul.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "이용 안내", "href": "../../guide/index.html"},
+        {"text": "회사 소개", "href": "../../about/index.html"},
+        {"text": "스파 가이드", "href": "../../guide/spa.html"}
+      ],
+      "used": false
+    },
+    {
+      "slug": "freelance-vs-employee-tradeoff",
+      "post_type": "guide",
+      "title": "프리랜서로 갈까, 직원으로 남을까 — 둘 다 살아본 사람의 정리",
+      "category": "프리랜서 수입관리",
+      "search_intent": "프리랜서 테라피스트와 직원형 관리사의 수입·세금·안정성을 비교하고 본인에게 맞는 형태를 정하고 싶음",
+      "scenario": "프리랜서 1년·직원 1년 모두 경험한 5년차가 다음 1년을 결정",
+      "region_hint": "전국",
+      "related_label": "직업 정보",
+      "related_links": [
+        {"text": "전체 구인공고", "href": "../../jobs/index.html"},
+        {"text": "이력서 등록", "href": "../../resumes/index.html"},
+        {"text": "업체 가입 안내", "href": "../../partners/index.html"},
+        {"text": "이용 안내", "href": "../../guide/index.html"},
+        {"text": "회사 소개", "href": "../../about/index.html"},
+        {"text": "고객지원", "href": "../../support/index.html"}
+      ],
+      "used": false
+    }
+  ]
+}
