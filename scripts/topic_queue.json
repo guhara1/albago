@@ -19,8 +19,7 @@
         {"text": "스웨디시 시술 가이드", "href": "../../guide/swedish.html"},
         {"text": "안전 가이드", "href": "../../support/index.html#safety"}
       ],
-      "used": true,
-      "published_at": "2026-05-13"
+      "used": false
     },
     {
       "slug": "interview-questions-massage-job",

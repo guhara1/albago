@@ -242,7 +242,8 @@ def esc(s: str) -> str:
 
 
 def build_jsonld(title: str, description: str, post_url: str, iso_date: str,
-                 body_chars: int, keywords: list, category: str) -> str:
+                 body_chars: int, keywords: list, category: str,
+                 toc_items: list[tuple[int, str]] | None = None) -> str:
     base = DOMAIN
     graph = [
         {
@@ -299,6 +300,23 @@ def build_jsonld(title: str, description: str, post_url: str, iso_date: str,
             },
         },
     ]
+    if toc_items:
+        graph.append({
+            "@type": "ItemList",
+            "@id": f"{post_url}#toc",
+            "name": "이 글에서 짚는 다섯 가지",
+            "itemListOrder": "https://schema.org/ItemListOrderAscending",
+            "numberOfItems": len(toc_items),
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": pos,
+                    "name": name,
+                    "url": f"{post_url}#h2-{pos}",
+                }
+                for pos, name in toc_items
+            ],
+        })
     return json.dumps({"@context": "https://schema.org", "@graph": graph},
                       ensure_ascii=False, indent=2)
 
@@ -309,17 +327,18 @@ def render_html(topic: dict, article: dict, slug: str, post_url: str) -> str:
     date_korean = now.strftime("%Y년 %m월 %d일")
 
     sections_html = "\n".join(
-        f'  <section>\n'
-        f'    <h2>{esc(article[f"h2_{i}"])}</h2>\n'
+        f'  <section id="sec-{i}">\n'
+        f'    <h2 id="h2-{i}">{esc(article[f"h2_{i}"])}</h2>\n'
         f'    <p>{esc(article[f"p_{i}"]).replace(chr(10), "</p><p>")}</p>\n'
         f'  </section>'
         for i in range(1, 6)
     )
 
-    # 본문 상단 TL;DR 카드: 다섯 H2 제목에서 "N. " 접두사를 떼고 한 줄씩 보여줌
+    # 본문 상단 TL;DR 카드: 다섯 H2 제목에서 "N. " 접두사를 떼고 한 줄씩
+    # 각 항목은 해당 H2 로 점프하는 앵커 — 가독성 + SERP jump-to 링크 노출 기대
     num_prefix = re.compile(r"^[0-9]+\.\s*")
     lead_items = "\n".join(
-        '      <li>' + esc(num_prefix.sub("", article[f"h2_{i}"])) + '</li>'
+        f'      <li><a href="#h2-{i}">' + esc(num_prefix.sub("", article[f"h2_{i}"])) + '</a></li>'
         for i in range(1, 6)
     )
     body_chars_for_lead = sum(len(article[f"p_{i}"]) for i in range(1, 6))
@@ -349,6 +368,10 @@ def render_html(topic: dict, article: dict, slug: str, post_url: str) -> str:
         keywords.append(topic["region_hint"])
 
     body_chars = sum(len(article[f"p_{i}"]) for i in range(1, 6))
+    toc_items = [
+        (i, num_prefix.sub("", article[f"h2_{i}"]))
+        for i in range(1, 6)
+    ]
     jsonld_str = build_jsonld(
         title=article["title"],
         description=article["description"],
@@ -357,6 +380,7 @@ def render_html(topic: dict, article: dict, slug: str, post_url: str) -> str:
         body_chars=body_chars,
         keywords=keywords,
         category=category,
+        toc_items=toc_items,
     )
 
     return f'''<!doctype html>
