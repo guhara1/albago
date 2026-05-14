@@ -1747,12 +1747,38 @@ details.faq p {
   }
   .hero-cta { flex-direction: column; align-items: stretch; }
   .hero-cta .btn { width: 100%; }
+  /* 모바일 2열 — 가로 1개씩 너무 휑해서 2개씩 노출 */
+  .tier-grid.cols-2,
+  .tier-grid.cols-3,
+  .tier-grid.cols-4,
+  .tier-grid.cols-5 { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .chip-grid { grid-template-columns: repeat(4, 1fr); }
+  .quick-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* 모바일 2열 카드 시인성 보강 — 패딩·폰트 압축 */
+  .banner__visual { min-height: 110px !important; padding: 16px 10px !important; }
+  .banner__region { font-size: 10.5px; padding: 2px 8px; margin-bottom: 5px; }
+  .banner__shop { font-size: 16px !important; letter-spacing: -0.5px; line-height: 1.2; }
+  .banner__tagline { font-size: 10.5px; padding: 3px 8px; margin-top: 6px; }
+  .banner__info { padding: 10px 11px; }
+  .banner__cat { font-size: 11px; margin-bottom: 3px; }
+  .banner__desc { font-size: 12px; line-height: 1.4; -webkit-line-clamp: 2; margin-bottom: 8px; }
+  .banner__tags { gap: 4px; }
+  .banner__tag { font-size: 10px; padding: 2px 6px; }
+  .banner-vvip .banner__shop { font-size: 17px !important; }
+  .banner-vip .banner__shop { font-size: 15px !important; }
+  .banner-vip .banner__visual { min-height: 125px !important; }
+  .banner-premium .banner__shop { font-size: 13.5px !important; }
+}
+
+/* 매우 좁은 화면(360px 이하)에서는 가독성 위해 1열로 폴백 */
+@media (max-width: 360px) {
   .tier-grid.cols-2,
   .tier-grid.cols-3,
   .tier-grid.cols-4,
   .tier-grid.cols-5 { grid-template-columns: 1fr; }
-  .chip-grid { grid-template-columns: repeat(4, 1fr); }
-  .quick-grid { grid-template-columns: repeat(3, 1fr); }
+  .banner__shop { font-size: 20px !important; }
+  .banner-vvip .banner__shop { font-size: 22px !important; }
 }
 
 /* Footer business info */
