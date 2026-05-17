@@ -7,8 +7,12 @@
 //   TG_TOKEN_FRIEND — 보조 봇 토큰
 //   TG_CHAT_FRIEND  — 보조 텔레그램 chat_id
 
-export async function onRequestPost(context) {
+export async function onRequest(context) {
   const { request, env } = context;
+
+  if (request.method !== "POST") {
+    return jsonResponse({ ok: false, error: "Method not allowed. POST only." }, 405);
+  }
 
   if (!request.headers.get("content-type")?.includes("application/json")) {
     return jsonResponse({ ok: false, error: "Content-Type must be application/json" }, 400);
