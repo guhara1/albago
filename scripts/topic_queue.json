@@ -151,7 +151,8 @@
           "href": "../../about/index.html"
         }
       ],
-      "used": false
+      "used": true,
+      "published_at": "2026-05-25"
     },
     {
       "slug": "emotional-labor-massage-therapist",
