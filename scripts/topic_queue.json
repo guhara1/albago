@@ -189,7 +189,8 @@
           "href": "../../support/index.html"
         }
       ],
-      "used": false
+      "used": true,
+      "published_at": "2026-06-01"
     },
     {
       "slug": "freelance-therapist-income-management",
