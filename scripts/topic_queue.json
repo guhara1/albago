@@ -227,7 +227,8 @@
           "href": "../../support/index.html#safety"
         }
       ],
-      "used": false
+      "used": true,
+      "published_at": "2026-06-08"
     },
     {
       "slug": "customer-service-difficult-cases",
