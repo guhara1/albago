@@ -265,7 +265,8 @@
           "href": "../../support/index.html#safety"
         }
       ],
-      "used": false
+      "used": true,
+      "published_at": "2026-06-15"
     },
     {
       "slug": "license-vs-no-license-massage",
