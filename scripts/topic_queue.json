@@ -303,7 +303,8 @@
           "href": "../../about/index.html"
         }
       ],
-      "used": false
+      "used": true,
+      "published_at": "2026-06-22"
     },
     {
       "slug": "rookie-social-life-service-job",
