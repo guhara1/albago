@@ -379,7 +379,8 @@
           "href": "../../guide/index.html"
         }
       ],
-      "used": false
+      "used": true,
+      "published_at": "2026-07-06"
     },
     {
       "slug": "resume-writing-massage-job-tips",
