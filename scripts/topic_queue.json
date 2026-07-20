@@ -455,7 +455,8 @@
           "href": "../../support/index.html#safety"
         }
       ],
-      "used": false
+      "used": true,
+      "published_at": "2026-07-20"
     },
     {
       "slug": "homecare-therapist-day-in-life",
