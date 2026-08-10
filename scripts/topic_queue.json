@@ -569,7 +569,8 @@
           "href": "../../guide/index.html"
         }
       ],
-      "used": false
+      "used": true,
+      "published_at": "2026-08-10"
     },
     {
       "slug": "interview-day-what-to-wear-bring",
