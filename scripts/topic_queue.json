@@ -607,7 +607,8 @@
           "href": "../../support/index.html#safety"
         }
       ],
-      "used": false
+      "used": true,
+      "published_at": "2026-08-17"
     },
     {
       "slug": "manager-track-from-therapist",
