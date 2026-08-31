@@ -645,7 +645,8 @@
           "href": "../../guide/spa.html"
         }
       ],
-      "used": false
+      "used": true,
+      "published_at": "2026-08-31"
     },
     {
       "slug": "wrist-back-pain-self-care",
