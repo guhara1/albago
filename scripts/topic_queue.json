@@ -721,7 +721,8 @@
           "href": "../../support/index.html"
         }
       ],
-      "used": false
+      "used": true,
+      "published_at": "2026-09-21"
     },
     {
       "slug": "regional-market-seoul-busan-jeju",
