@@ -835,7 +835,8 @@
           "href": "../../support/index.html"
         }
       ],
-      "used": false
+      "used": true,
+      "published_at": "2026-10-12"
     },
     {
       "slug": "shop-owner-hires-good-manager",
